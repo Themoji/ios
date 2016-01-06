@@ -1,0 +1,14 @@
+fastlane_version "1.49.0"
+
+default_platform :ios
+
+platform :ios do
+  lane :beta do
+    produce(skip_itc: true)
+    produce(skip_itc: true, app_identifier: "net.sunapps.EmojiCommunicationsInc.watchkitapp")
+    produce(skip_itc: true, app_identifier: "net.sunapps.EmojiCommunicationsInc.watchkitapp.watchkitextension")
+    sigh(development: true, force: false)
+    sigh(development: true, app_identifier: "net.sunapps.EmojiCommunicationsInc.watchkitapp", force: true)
+    sigh(development: true, app_identifier: "net.sunapps.EmojiCommunicationsInc.watchkitapp.watchkitextension", force: true)
+  end 
+end
