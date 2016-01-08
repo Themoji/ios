@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EmojiKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
@@ -32,11 +33,13 @@ class ViewController: UIViewController {
             else
             {
                 let searchString = self.textInput.text!.lowercaseString // all chars since the last match
-                let dic = allEmojis()
-                for (emoji, text) in dic {
-                    if (text.lowercaseString.containsString(searchString)) {
-                        self.emojiLabel.text = "\(emoji)"
-                        //                    resetTextField()
+                let fetcher = EmojiFetcher()
+                
+                fetcher.query(searchString) { emojiResults in
+                    for (emoji) in emojiResults {
+                        NSLog("Joo: \(emoji)")
+                        self.emojiLabel.text = emoji.character
+                        break
                     }
                 }
             }
@@ -60,29 +63,6 @@ class ViewController: UIViewController {
         else {
             return nil // stupid text, no need for dat
         }
-    }
-    
-    func allEmojis() -> NSDictionary {
-        let result = NSMutableDictionary()
-        
-        let emojiRanges = [
-            0x1F601...0x1F64F,
-            0x2702...0x27B0,
-            0x1F680...0x1F6C0,
-            0x1F170...0x1F251
-        ]
-        
-        for range in emojiRanges {
-            for i in range {
-                let c = String(UnicodeScalar(i))
-                let str = emojiToText(c.characters.last!)
-                if (str != nil) {
-                    result[c] = str
-                }
-            }
-        }
-        print("Found \(result.count) emojis")
-        return result
     }
 }
 
