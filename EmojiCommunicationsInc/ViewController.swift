@@ -37,7 +37,6 @@ class ViewController: UIViewController {
                 
                 fetcher.query(searchString) { emojiResults in
                     for (emoji) in emojiResults {
-                        NSLog("Joo: \(emoji)")
                         self.emojiLabel.text = emoji.character
                         break
                     }
