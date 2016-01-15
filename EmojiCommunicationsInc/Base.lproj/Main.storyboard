@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiCommunicationsInc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Themoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,30 +18,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-Tw-RHw">
-                                <rect key="frame" x="252" y="500" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <connections>
-                                    <action selector="valueDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="9Nw-SA-f85"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍕" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="150" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-zn-XJQ">
-                                <rect key="frame" x="20" y="0.0" width="560" height="334"/>
+                                <rect key="frame" x="20" y="0.0" width="560" height="284"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="300"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-5P-DhF">
+                                <rect key="frame" x="20" y="0.0" width="560" height="284"/>
+                                <connections>
+                                    <action selector="didTapEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbn-sr-WDr"/>
+                                </connections>
+                            </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-8m-amg">
+                                <rect key="frame" x="2" y="471" width="596" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="FiR-hG-kv7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aei-4I-ocq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vfn-pl-uuN"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Emoji" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-Tw-RHw">
+                                <rect key="frame" x="20" y="565" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Kds-Xe-P5g"/>
+                                    <constraint firstAttribute="height" constant="30" id="fmR-LE-BTZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kds-Xe-P5g"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="valueDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="9Nw-SA-f85"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="top" id="1ef-tt-h1E"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="leading" secondItem="1ag-zn-XJQ" secondAttribute="trailing" id="1zM-zG-X9x"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="3Ea-ZO-5iV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="266" id="Kj2-rH-y6d"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="leading" secondItem="1ag-zn-XJQ" secondAttribute="leading" id="6mK-wF-Gzv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="Ba7-ky-eVI"/>
+                            <constraint firstItem="jL4-8m-amg" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="-5" id="BwD-p7-peo"/>
+                            <constraint firstItem="yJi-Tw-RHw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DaO-yv-I9M"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="width" secondItem="1ag-zn-XJQ" secondAttribute="width" id="Eyw-G3-f5U"/>
+                            <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="jL4-8m-amg" secondAttribute="bottom" id="GGz-Gt-nyB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yJi-Tw-RHw" secondAttribute="bottom" constant="5" id="JV2-S2-reD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="316" id="Kj2-rH-y6d"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" id="PKo-B2-7jh"/>
+                            <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" id="QLf-1T-YCJ"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dYO-X3-9YM"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="width" secondItem="1ag-zn-XJQ" secondAttribute="width" id="f5F-jE-b3e"/>
+                            <constraint firstItem="jL4-8m-amg" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" constant="-18" id="hQk-mA-ZY0"/>
+                            <constraint firstItem="yJi-Tw-RHw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heb-bB-FKn"/>
+                            <constraint firstItem="jL4-8m-amg" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" constant="18" id="mmz-Cd-3Hn"/>
+                            <constraint firstItem="ygq-5P-DhF" firstAttribute="height" secondItem="1ag-zn-XJQ" secondAttribute="height" id="pKz-YR-Abb"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tRc-Pg-zII"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1zM-zG-X9x"/>
+                                <exclude reference="PKo-B2-7jh"/>
+                                <exclude reference="f5F-jE-b3e"/>
+                                <exclude reference="BwD-p7-peo"/>
+                                <exclude reference="QLf-1T-YCJ"/>
+                                <exclude reference="heb-bB-FKn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="autocompletionTableView" destination="jL4-8m-amg" id="Qy2-Fc-SBe"/>
+                        <outlet property="bottomConstraint" destination="JV2-S2-reD" id="dL1-OR-T7A"/>
                         <outlet property="emojiLabel" destination="1ag-zn-XJQ" id="13g-cx-IOT"/>
                         <outlet property="textInput" destination="yJi-Tw-RHw" id="dUN-T7-G6H"/>
                     </connections>
