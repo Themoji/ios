@@ -2791,7 +2791,8 @@
 }, {
 	"character": "👣",
 	"aliases": [
-		"prints"
+		"prints",
+		"feet"
 	],
 	"groups": [],
 	"name": "footprints"
@@ -6210,7 +6211,8 @@
 		"can",
 		"trash",
 		"bin",
-		"basket"
+		"basket",
+		"garbage"
 	]
 }, {
 	"groups": [

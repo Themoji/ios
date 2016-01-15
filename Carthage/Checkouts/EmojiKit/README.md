@@ -4,26 +4,33 @@ EmojiKit is a simple emoji-querying framework in Swift. It is used in [Paste](ht
 Installation
 ------------
 If you’re using [Carthage](http://github.com/Carthage/Carthage), add EmojiKit to your `Cartfile`:
-```
+
+```swift
 github "dasmer/EmojiKit"
 ```
 
 Otherwise, if you're using [Cocoapods](http://cocoapods.org), add EmojiKit to your `Podfile`:
-```
-pod 'EmojiKit', '~> 1.0'
+
+```ruby
+pod 'EmojiKit', '~> 0.0.1'
 ```
 
 Usage
 -----
 ##### 1. Create an EmojiFetcher instance variable.
-```
+
+```swift
 let fetcher = EmojiFetcher()
 ```
+
 ##### 2. Use EmojiFetcher's `query` function to get an array of `Emoji` structs that match the given search string.
-```
-  fetcher.query("food") { emojiResults in
-      // Use emojiResults
+
+```swift
+fetcher.query("food") { emojiResults in
+  for emoji in emojiResults {
+    print("Current Emoji: \(emoji.character) \(emoji.name)")
   }
+}
 ```
 
 Contributing
