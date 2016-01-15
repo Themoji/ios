@@ -48,13 +48,6 @@
 		CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB6C1221C3C16E200BDB0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB6C1241C3C16E200BDB0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB6C12D1C3C16E200BDB0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		CAB6C12F1C3C16E200BDB0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAB6C1311C3C16E200BDB0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB6C13B1C3C16E200BDB0F0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		CAB6C13D1C3C16E200BDB0F0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		CAB6C13F1C3C16E200BDB0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAB6C1411C3C16E200BDB0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmojiKit.framework; path = Carthage/Build/iOS/EmojiKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +68,6 @@
 			children = (
 				CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */,
 				CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */,
-				CAB6C12B1C3C16E200BDB0F0 /* EmojiCommunicationsInc WatchKit App */,
-				CAB6C13A1C3C16E200BDB0F0 /* EmojiCommunicationsInc WatchKit Extension */,
 				CAB6C1161C3C16E200BDB0F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,27 +91,6 @@
 				CAB6C1241C3C16E200BDB0F0 /* Info.plist */,
 			);
 			path = EmojiCommunicationsInc;
-			sourceTree = "<group>";
-		};
-		CAB6C12B1C3C16E200BDB0F0 /* EmojiCommunicationsInc WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				CAB6C12C1C3C16E200BDB0F0 /* Interface.storyboard */,
-				CAB6C12F1C3C16E200BDB0F0 /* Assets.xcassets */,
-				CAB6C1311C3C16E200BDB0F0 /* Info.plist */,
-			);
-			path = "EmojiCommunicationsInc WatchKit App";
-			sourceTree = "<group>";
-		};
-		CAB6C13A1C3C16E200BDB0F0 /* EmojiCommunicationsInc WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				CAB6C13B1C3C16E200BDB0F0 /* InterfaceController.swift */,
-				CAB6C13D1C3C16E200BDB0F0 /* ExtensionDelegate.swift */,
-				CAB6C13F1C3C16E200BDB0F0 /* Assets.xcassets */,
-				CAB6C1411C3C16E200BDB0F0 /* Info.plist */,
-			);
-			path = "EmojiCommunicationsInc WatchKit Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,14 +189,6 @@
 				CAB6C1221C3C16E200BDB0F0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CAB6C12C1C3C16E200BDB0F0 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAB6C12D1C3C16E200BDB0F0 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
