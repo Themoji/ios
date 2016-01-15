@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA8E13321C48CEE600FB865B /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13311C48CEE600FB865B /* CategoryButton.swift */; };
+		CA8E13341C48D72A00FB865B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13331C48D72A00FB865B /* Category.swift */; };
+		CA8E13361C48DA8100FB865B /* CategoryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8E13351C48DA8100FB865B /* CategoryButton.xib */; };
+		CA8E133E1C48E21D00FB865B /* EmojiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E133B1C48E20500FB865B /* EmojiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA8E133F1C48E22C00FB865B /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E133B1C48E20500FB865B /* EmojiKit.framework */; };
 		CAB6C1191C3C16E200BDB0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */; };
 		CAB6C11B1C3C16E200BDB0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */; };
 		CAB6C11E1C3C16E200BDB0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */; };
 		CAB6C1201C3C16E200BDB0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */; };
 		CAB6C1231C3C16E200BDB0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */; };
-		CAB6C1511C3F770C00BDB0F0 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */; };
-		CAB6C1521C3F770D00BDB0F0 /* EmojiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CAB6C1521C3F770D00BDB0F0 /* EmojiKit.framework in Embed Frameworks */,
+				CA8E133E1C48E21D00FB865B /* EmojiKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA8E13311C48CEE600FB865B /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		CA8E13331C48D72A00FB865B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CA8E13351C48DA8100FB865B /* CategoryButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButton.xib; sourceTree = "<group>"; };
+		CA8E133B1C48E20500FB865B /* EmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmojiKit.framework; path = Carthage/Build/iOS/EmojiKit.framework; sourceTree = SOURCE_ROOT; };
 		CAB6C1151C3C16E200BDB0F0 /* Themoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +55,6 @@
 		CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB6C1221C3C16E200BDB0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB6C1241C3C16E200BDB0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmojiKit.framework; path = Carthage/Build/iOS/EmojiKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB6C1511C3F770C00BDB0F0 /* EmojiKit.framework in Frameworks */,
+				CA8E133F1C48E22C00FB865B /* EmojiKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +72,6 @@
 		CAB6C10C1C3C16E200BDB0F0 = {
 			isa = PBXGroup;
 			children = (
-				CAB6C1501C3F770C00BDB0F0 /* EmojiKit.framework */,
 				CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */,
 				CAB6C1161C3C16E200BDB0F0 /* Products */,
 			);
@@ -83,12 +88,16 @@
 		CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */ = {
 			isa = PBXGroup;
 			children = (
+				CA8E133B1C48E20500FB865B /* EmojiKit.framework */,
 				CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */,
 				CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */,
 				CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */,
 				CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */,
 				CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */,
 				CAB6C1241C3C16E200BDB0F0 /* Info.plist */,
+				CA8E13311C48CEE600FB865B /* CategoryButton.swift */,
+				CA8E13351C48DA8100FB865B /* CategoryButton.xib */,
+				CA8E13331C48D72A00FB865B /* Category.swift */,
 			);
 			path = EmojiCommunicationsInc;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB6C1231C3C16E200BDB0F0 /* LaunchScreen.storyboard in Resources */,
+				CA8E13361C48DA8100FB865B /* CategoryButton.xib in Resources */,
 				CAB6C1201C3C16E200BDB0F0 /* Assets.xcassets in Resources */,
 				CAB6C11E1C3C16E200BDB0F0 /* Main.storyboard in Resources */,
 			);
@@ -167,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8E13321C48CEE600FB865B /* CategoryButton.swift in Sources */,
+				CA8E13341C48D72A00FB865B /* Category.swift in Sources */,
 				CAB6C11B1C3C16E200BDB0F0 /* ViewController.swift in Sources */,
 				CAB6C1191C3C16E200BDB0F0 /* AppDelegate.swift in Sources */,
 			);
