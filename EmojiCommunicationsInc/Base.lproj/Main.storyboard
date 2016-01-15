@@ -29,8 +29,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-5P-DhF">
                                 <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <action selector="didTapEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbn-sr-WDr"/>
+                                    <outletCollection property="gestureRecognizers" destination="sps-8T-aJi" appends="YES" id="pdi-8s-Zbk"/>
                                 </connections>
                             </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-8m-amg">
@@ -124,11 +126,17 @@
                         <outlet property="autocompletionTableView" destination="jL4-8m-amg" id="Qy2-Fc-SBe"/>
                         <outlet property="bottomConstraint" destination="JV2-S2-reD" id="dL1-OR-T7A"/>
                         <outlet property="categoriesCollectionView" destination="3iE-A2-5xX" id="ujK-JA-lc8"/>
+                        <outlet property="emojiHeightConstraint" destination="mHA-O8-8m5" id="P3Q-20-Iaz"/>
                         <outlet property="emojiLabel" destination="1ag-zn-XJQ" id="13g-cx-IOT"/>
                         <outlet property="textInput" destination="yJi-Tw-RHw" id="dUN-T7-G6H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="sps-8T-aJi">
+                    <connections>
+                        <action selector="didDoubleTapEmoji:" destination="BYZ-38-t0r" id="7Sg-Bh-da9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="340" y="387"/>
         </scene>

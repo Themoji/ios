@@ -17,13 +17,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var autocompletionTableView: UITableView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var emojiHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var autocompletionItemsHeight: NSLayoutConstraint!
     var autocompletionItemsEmoji: Array<String> = []
     var autocompletionItemsName: Array<String> = []
     var isCategoryOpen = false
+    var isFullScreen = false
     
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
+    let emojiLabelHeight: CGFloat = 300
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
+        self.emojiHeightConstraint.constant = emojiLabelHeight
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -52,12 +56,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.view.layoutIfNeeded()
         }
     }
+    
+    @IBAction func didDoubleTapEmoji(sender: AnyObject) {
+        if (isFullScreen) {
+            didTapEmoji(self) // reset
+            return
+        }
+        // full screen mode
+        resetState()
+        resetTextField()
+        
+        self.emojiHeightConstraint.constant = self.view.bounds.height
+        UIView.animateWithDuration(0.25, animations: { () -> Void in
+            self.categoriesCollectionView.alpha = 0.0
+            self.textInput.alpha = 0.0
+            self.view.layoutIfNeeded()
+        })
+        { (something) -> Void in
+            self.categoriesCollectionView.hidden = true
+            self.textInput.hidden = true
+        }
+        isFullScreen = true
+    }
 
     @IBAction func didTapEmoji(sender: AnyObject) {
-        self.textInput.resignFirstResponder()
-        self.resetTextField()
-        self.autocompletionTableView.hidden = true
-        resetState()
+        if isFullScreen {
+            self.emojiHeightConstraint.constant = emojiLabelHeight
+            self.categoriesCollectionView.hidden = false
+            self.textInput.hidden = false
+
+            UIView.animateWithDuration(0.25, animations: { () -> Void in
+                self.categoriesCollectionView.alpha = 1.0
+                self.textInput.alpha = 1.0
+                self.view.layoutIfNeeded()
+            })
+            isFullScreen = false
+        }
+        else {
+            // dismiss keyboard and so on
+            self.textInput.resignFirstResponder()
+            self.resetTextField()
+            self.autocompletionTableView.hidden = true
+            resetState()
+        }
     }
 
     @IBAction func valueDidChange(sender: AnyObject) {
@@ -92,6 +133,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func resetTextField() {
         self.textInput.text = ""
+        self.textInput.resignFirstResponder()
     }
     
     func setCurrentEmoji(e: String) {
