@@ -1,2 +1,7 @@
-app_identifier "net.sunapps.EmojiCommunicationsInc" # The bundle identifier of your app
-apple_id "felix@sunapps.net" # Your Apple email address
+app_identifier "me.themoji.app" # The bundle identifier of your app
+apple_id "krausefx1@gmail.com" # Your Apple email address
+
+team_id "A83XXT7P9C"  # Apple Developer Account
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/docs/Appfile.md
