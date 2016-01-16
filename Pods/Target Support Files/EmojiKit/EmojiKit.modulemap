@@ -1,0 +1,6 @@
+framework module EmojiKit {
+  umbrella header "EmojiKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
