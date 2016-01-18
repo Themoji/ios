@@ -8,3 +8,5 @@
 
 app_identifier "me.themoji.app" # The bundle identifier of your app
 username "krausefx1@gmail.com" # your Apple ID user
+
+app_icon "fastlane/metadata/Themoji.png"
