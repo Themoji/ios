@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="🍕" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="150" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-zn-XJQ">
-                                <rect key="frame" x="0.0" y="114" width="600" height="360"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="🍕" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="150" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-zn-XJQ">
+                                <rect key="frame" x="0.0" y="175.5" width="600" height="298.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="y2r-nm-aZj"/>
                                 </constraints>
@@ -44,8 +44,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vKL-gv-fBl"/>
                                 </connections>
                             </textField>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-8m-amg">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-8m-amg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="103.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="yKW-YC-woa"/>
@@ -82,7 +82,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2Rj-KR-EoL"/>
-                            <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="jL4-8m-amg" secondAttribute="bottom" id="5mT-On-GwD"/>
+                            <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="yJi-Tw-RHw" secondAttribute="bottom" priority="999" constant="111.5" id="35R-H4-BIO"/>
+                            <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="jL4-8m-amg" secondAttribute="bottom" constant="8" id="5mT-On-GwD"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="7cf-Pf-NwA"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="top" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="7fl-Mt-3l0"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wl-Ri-V19"/>
@@ -92,7 +93,6 @@
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mdf-gx-EWy"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qg4-cG-mRK"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bNz-mD-3q6"/>
-                            <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="yJi-Tw-RHw" secondAttribute="bottom" priority="900" constant="50" id="dYG-Fz-vmw"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dsS-dI-r4q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3iE-A2-5xX" secondAttribute="bottom" constant="8" id="geF-iX-76c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yJi-Tw-RHw" secondAttribute="trailing" constant="8" id="hed-gT-sNh"/>
@@ -100,17 +100,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jL4-8m-amg" secondAttribute="trailing" constant="-20" id="zB4-65-5c8"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="8" id="zko-BI-CXn"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="dYG-Fz-vmw"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="autocompletionTableView" destination="jL4-8m-amg" id="Qy2-Fc-SBe"/>
                         <outlet property="categoriesCollectionView" destination="3iE-A2-5xX" id="ujK-JA-lc8"/>
                         <outlet property="emojiLabel" destination="1ag-zn-XJQ" id="13g-cx-IOT"/>
-                        <outlet property="repositionEmojiConstraint" destination="dYG-Fz-vmw" id="8lc-tt-CpI"/>
+                        <outlet property="repositionEmojiConstraint" destination="35R-H4-BIO" id="OXf-x6-VXx"/>
                         <outlet property="textInput" destination="yJi-Tw-RHw" id="dUN-T7-G6H"/>
                     </connections>
                 </viewController>

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var autocompletionTableView: UITableView!
 
-    @IBOutlet weak var repositionEmojiConstraint: NSLayoutConstraint!
+    @IBOutlet var repositionEmojiConstraint: NSLayoutConstraint!
 
     var autocompletionItemsEmoji: Array<String> = []
     var autocompletionItemsName: Array<String> = []
@@ -34,7 +34,9 @@ class ViewController: UIViewController {
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
 
+        setupTable()
         setupLabel()
+        resetState()
     }
 
 }
@@ -42,6 +44,10 @@ class ViewController: UIViewController {
 // MARK: - UI Modification
 
 extension ViewController {
+
+    func setupTable() {
+        autocompletionTableView.addObserver(self, forKeyPath: "hidden", options: [.New], context: nil)
+    }
 
     func setupLabel() {
         emojiLabel.userInteractionEnabled = true
@@ -62,11 +68,12 @@ extension ViewController {
     }
 
     func resetState() {
-        self.autocompletionTableView.hidden = true
-        self.isCategoryOpen = false
-        self.categoriesCollectionView.hidden = false
-        repositionEmojiConstraint.active = true
-        textInput.resignFirstResponder()
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.autocompletionTableView.hidden = true
+            self.isCategoryOpen = false
+            self.categoriesCollectionView.hidden = false
+            self.textInput.resignFirstResponder()
+        }
     }
 
     func emojiToText(c: Character) -> String? {
@@ -135,16 +142,15 @@ extension ViewController {
     @IBAction func valueDidChange(sender: AnyObject) {
         if (self.textInput.text! != "") {
 
-            repositionEmojiConstraint.active = false
-
             let input = self.textInput.text!.characters.last!
-            if emojiToText(input) != nil
+            if let _ = emojiToText(input)
             {
                 setCurrentEmoji("\(input)")
                 resetTextField(false)
             }
             else
             {
+
                 let searchString = self.textInput.text!.lowercaseString // all chars since the last match
                 let fetcher = EmojiFetcher()
 
@@ -171,6 +177,24 @@ extension ViewController {
             PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied \(self.emojiLabel.text!) to clipboard")
             PKHUD.sharedHUD.show()
             PKHUD.sharedHUD.hide(afterDelay: 1.0)
+        }
+    }
+
+}
+
+// MARK: - KVO 
+
+extension ViewController {
+
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        dispatch_async(dispatch_get_main_queue()) { [weak self] in
+            print("\n\(self), \n\(object), \n\(self?.repositionEmojiConstraint)")
+            if let weakSelf = self,
+            object = object as? UITableView where object == weakSelf.autocompletionTableView,
+            let constraint = weakSelf.repositionEmojiConstraint {
+                constraint.active = object.hidden ? true : false
+                weakSelf.view.layoutIfNeeded()
+            }
         }
     }
 
@@ -259,6 +283,14 @@ extension ViewController: UICollectionViewDelegate {
 // MARK: - UITextFieldDelegate
 
 extension ViewController: UITextFieldDelegate {
+
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+
+        resetState()
+
+        return true
+    }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
