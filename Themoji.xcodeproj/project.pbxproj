@@ -11,12 +11,24 @@
 		CA8E13321C48CEE600FB865B /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13311C48CEE600FB865B /* CategoryButton.swift */; };
 		CA8E13341C48D72A00FB865B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13331C48D72A00FB865B /* Category.swift */; };
 		CA8E13361C48DA8100FB865B /* CategoryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8E13351C48DA8100FB865B /* CategoryButton.xib */; };
+		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
+		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
 		CAB6C1191C3C16E200BDB0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */; };
 		CAB6C11B1C3C16E200BDB0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */; };
 		CAB6C11E1C3C16E200BDB0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */; };
 		CAB6C1201C3C16E200BDB0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */; };
 		CAB6C1231C3C16E200BDB0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA8E134C1C4C760900FB865B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB6C10D1C3C16E200BDB0F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB6C1141C3C16E200BDB0F0;
+			remoteInfo = Themoji;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		640CB6321C49CD2700D0E8B0 /* Embed Frameworks */ = {
@@ -46,6 +58,10 @@
 		CA8E13311C48CEE600FB865B /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		CA8E13331C48D72A00FB865B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CA8E13351C48DA8100FB865B /* CategoryButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButton.xib; sourceTree = "<group>"; };
+		CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA8E13491C4C760900FB865B /* ThemojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemojiUITests.swift; sourceTree = "<group>"; };
+		CA8E134B1C4C760900FB865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA8E13511C4C761500FB865B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CAB6C1151C3C16E200BDB0F0 /* Themoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA8E13441C4C760900FB865B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAB6C1121C3C16E200BDB0F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,10 +109,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA8E13481C4C760900FB865B /* ThemojiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA8E13511C4C761500FB865B /* SnapshotHelper.swift */,
+				CA8E13491C4C760900FB865B /* ThemojiUITests.swift */,
+				CA8E134B1C4C760900FB865B /* Info.plist */,
+			);
+			path = ThemojiUITests;
+			sourceTree = "<group>";
+		};
 		CAB6C10C1C3C16E200BDB0F0 = {
 			isa = PBXGroup;
 			children = (
 				CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */,
+				CA8E13481C4C760900FB865B /* ThemojiUITests */,
 				CAB6C1161C3C16E200BDB0F0 /* Products */,
 				0AA4A26E6DA01FB035EADD8E /* Pods */,
 				A398AA2E2CD4F0053349D238 /* Frameworks */,
@@ -100,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				CAB6C1151C3C16E200BDB0F0 /* Themoji.app */,
+				CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +158,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA8E13461C4C760900FB865B /* ThemojiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA8E13501C4C760900FB865B /* Build configuration list for PBXNativeTarget "ThemojiUITests" */;
+			buildPhases = (
+				CA8E13431C4C760900FB865B /* Sources */,
+				CA8E13441C4C760900FB865B /* Frameworks */,
+				CA8E13451C4C760900FB865B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA8E134D1C4C760900FB865B /* PBXTargetDependency */,
+			);
+			name = ThemojiUITests;
+			productName = ThemojiUITests;
+			productReference = CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CAB6C1141C3C16E200BDB0F0 /* Themoji */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAB6C14C1C3C16E200BDB0F0 /* Build configuration list for PBXNativeTarget "Themoji" */;
@@ -155,6 +208,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Felix Krause";
 				TargetAttributes = {
+					CA8E13461C4C760900FB865B = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CAB6C1141C3C16E200BDB0F0;
+					};
 					CAB6C1141C3C16E200BDB0F0 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Z7J9YMURXG;
@@ -175,11 +232,19 @@
 			projectRoot = "";
 			targets = (
 				CAB6C1141C3C16E200BDB0F0 /* Themoji */,
+				CA8E13461C4C760900FB865B /* ThemojiUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA8E13451C4C760900FB865B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAB6C1131C3C16E200BDB0F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +307,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA8E13431C4C760900FB865B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */,
+				CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAB6C1111C3C16E200BDB0F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +328,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA8E134D1C4C760900FB865B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB6C1141C3C16E200BDB0F0 /* Themoji */;
+			targetProxy = CA8E134C1C4C760900FB865B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */ = {
@@ -275,6 +357,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA8E134E1C4C760900FB865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ThemojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.ThemojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1806b02a-c11d-4129-9439-66ddf624f5c8";
+				TEST_TARGET_NAME = Themoji;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CA8E134F1C4C760900FB865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ThemojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.ThemojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1806b02a-c11d-4129-9439-66ddf624f5c8";
+				TEST_TARGET_NAME = Themoji;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		CAB6C1421C3C16E200BDB0F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +507,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA8E13501C4C760900FB865B /* Build configuration list for PBXNativeTarget "ThemojiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA8E134E1C4C760900FB865B /* Debug */,
+				CA8E134F1C4C760900FB865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CAB6C1101C3C16E200BDB0F0 /* Build configuration list for PBXProject "Themoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
