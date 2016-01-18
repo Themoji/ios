@@ -22,8 +22,8 @@
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="XRT-T6-8rP"/>
                             <exclude reference="IHT-ey-lXl"/>
+                            <exclude reference="XRT-T6-8rP"/>
                         </mask>
                     </variation>
                 </label>

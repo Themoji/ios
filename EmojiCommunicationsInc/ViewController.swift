@@ -81,6 +81,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         isFullScreen = true
     }
 
+    @IBAction func didLongPressEmoji(sender: AnyObject) {
+        // Copy to clipboard
+        UIPasteboard.generalPasteboard().string = self.emojiLabel.text!
+        
+        if !PKHUD.sharedHUD.isVisible {
+            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied \(self.emojiLabel.text!) to clipboard")
+            PKHUD.sharedHUD.show()
+            PKHUD.sharedHUD.hide(afterDelay: 1.0)
+        }
+    }
+    
     @IBAction func didTapEmoji(sender: AnyObject) {
         if isFullScreen {
             self.emojiHeightConstraint.constant = emojiLabelHeight
