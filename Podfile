@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'Themoji' do
   pod "EmojiKit"
+  pod "PKHUD"
 end
 

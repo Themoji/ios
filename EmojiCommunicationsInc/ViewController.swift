@@ -8,6 +8,7 @@
 
 import UIKit
 import EmojiKit
+import PKHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
 
