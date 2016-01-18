@@ -10,16 +10,15 @@ import UIKit
 import EmojiKit
 import PKHUD
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var autocompletionTableView: UITableView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var emojiHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var autocompletionItemsHeight: NSLayoutConstraint!
+
+    @IBOutlet weak var repositionEmojiConstraint: NSLayoutConstraint!
+
     var autocompletionItemsEmoji: Array<String> = []
     var autocompletionItemsName: Array<String> = []
     var isCategoryOpen = false
@@ -31,33 +30,66 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        
+
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
-        self.emojiHeightConstraint.constant = emojiLabelHeight
+
+        setupLabel()
     }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
-            self.bottomConstraint.constant = contentInsets.bottom + 5.0
-            self.categoriesCollectionView.hidden = true
-            UIView.animateWithDuration(0.25) {
-                self.view.layoutIfNeeded()
-            }
+
+}
+
+// MARK: - UI Modification
+
+extension ViewController {
+
+    func setupLabel() {
+        emojiLabel.userInteractionEnabled = true
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "didLongPressEmoji")
+        longPressGestureRecognizer.delaysTouchesBegan = true
+        emojiLabel.addGestureRecognizer(longPressGestureRecognizer)
+    }
+
+    func resetTextField(dismissKeyboard: Bool) {
+        self.textInput.text = ""
+        if dismissKeyboard {
+            self.textInput.resignFirstResponder()
         }
     }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        self.bottomConstraint.constant = 5.0
-        UIView.animateWithDuration(0.25) {
-            self.view.layoutIfNeeded()
+
+    func setCurrentEmoji(e: String) {
+        self.emojiLabel.text = e
+    }
+
+    func resetState() {
+        self.autocompletionTableView.hidden = true
+        self.isCategoryOpen = false
+        self.categoriesCollectionView.hidden = false
+        repositionEmojiConstraint.active = true
+        textInput.resignFirstResponder()
+    }
+
+    func emojiToText(c: Character) -> String? {
+        // From http://nshipster.com/cfstringtransform/
+
+        let cfstr = NSMutableString(string: String(c)) as CFMutableString
+        var range = CFRangeMake(0, CFStringGetLength(cfstr))
+        CFStringTransform(cfstr, &range, kCFStringTransformToUnicodeName, Bool(0))
+        let str = cfstr as String
+        if (str.containsString("{") && str.containsString("}")) {
+            return str.stringByReplacingOccurrencesOfString("\\N{", withString: "").stringByReplacingOccurrencesOfString("}", withString: "").capitalizedString
+        }
+        else {
+            return nil // stupid text, no need for dat
         }
     }
-    
+
+}
+
+// MARK: - Actions
+
+extension ViewController {
+
     @IBAction func didDoubleTapEmoji(sender: AnyObject) {
         if (isFullScreen) {
             didTapEmoji(self) // reset
@@ -65,36 +97,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         // full screen mode
         self.autocompletionTableView.hidden = true
-        self.autocompletionItemsHeight.constant = defaultAutoCompletionHeight
         resetTextField(true)
-        
-        self.emojiHeightConstraint.constant = self.view.bounds.height
+
         UIView.animateWithDuration(0.25, animations: { () -> Void in
             self.categoriesCollectionView.alpha = 0.0
             self.textInput.alpha = 0.0
             self.view.layoutIfNeeded()
-        })
-        { (something) -> Void in
-            self.categoriesCollectionView.hidden = true
-            self.textInput.hidden = true
+            })
+            { (something) -> Void in
+                self.categoriesCollectionView.hidden = true
+                self.textInput.hidden = true
         }
         isFullScreen = true
     }
 
-    @IBAction func didLongPressEmoji(sender: AnyObject) {
-        // Copy to clipboard
-        UIPasteboard.generalPasteboard().string = self.emojiLabel.text!
-        
-        if !PKHUD.sharedHUD.isVisible {
-            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied \(self.emojiLabel.text!) to clipboard")
-            PKHUD.sharedHUD.show()
-            PKHUD.sharedHUD.hide(afterDelay: 1.0)
-        }
-    }
-    
     @IBAction func didTapEmoji(sender: AnyObject) {
         if isFullScreen {
-            self.emojiHeightConstraint.constant = emojiLabelHeight
             self.categoriesCollectionView.hidden = false
             self.textInput.hidden = false
 
@@ -116,6 +134,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func valueDidChange(sender: AnyObject) {
         if (self.textInput.text! != "") {
+
+            repositionEmojiConstraint.active = false
+
             let input = self.textInput.text!.characters.last!
             if emojiToText(input) != nil
             {
@@ -126,7 +147,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             {
                 let searchString = self.textInput.text!.lowercaseString // all chars since the last match
                 let fetcher = EmojiFetcher()
-                
+
                 fetcher.query(searchString) { emojiResults in
                     self.autocompletionItemsName = []
                     self.autocompletionItemsEmoji = []
@@ -141,43 +162,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-    
-    // Modifying the UI
-    
-    func resetTextField(dismissKeyboard: Bool) {
-        self.textInput.text = ""
-        if dismissKeyboard {
-            self.textInput.resignFirstResponder()
-        }
-    }
-    
-    func setCurrentEmoji(e: String) {
-        self.emojiLabel.text = e
-    }
-    
-    func resetState() {
-        self.autocompletionTableView.hidden = true
-        self.autocompletionItemsHeight.constant = defaultAutoCompletionHeight
-        self.isCategoryOpen = false
-        self.categoriesCollectionView.hidden = false
-    }
-    
-    func emojiToText(c: Character) -> String? {
-        // From http://nshipster.com/cfstringtransform/
 
-        let cfstr = NSMutableString(string: String(c)) as CFMutableString
-        var range = CFRangeMake(0, CFStringGetLength(cfstr))
-        CFStringTransform(cfstr, &range, kCFStringTransformToUnicodeName, Bool(0))
-        let str = cfstr as String
-        if (str.containsString("{") && str.containsString("}")) {
-            return str.stringByReplacingOccurrencesOfString("\\N{", withString: "").stringByReplacingOccurrencesOfString("}", withString: "").capitalizedString
-        }
-        else {
-            return nil // stupid text, no need for dat
+    func didLongPressEmoji() {
+        // Copy to clipboard
+        UIPasteboard.generalPasteboard().string = self.emojiLabel.text!
+
+        if !PKHUD.sharedHUD.isVisible {
+            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied \(self.emojiLabel.text!) to clipboard")
+            PKHUD.sharedHUD.show()
+            PKHUD.sharedHUD.hide(afterDelay: 1.0)
         }
     }
-    
-    // UITableView
+
+}
+
+// MARK: - UITableViewDataSource
+
+extension ViewController: UITableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.autocompletionItemsEmoji.count
     }
@@ -188,15 +190,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = str
         return cell
     }
-    
+
+}
+
+// MARK: - UITableViewDelegate
+
+extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         setCurrentEmoji(self.autocompletionItemsEmoji[indexPath.row])
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        if self.isCategoryOpen {
-            // We have to close this
-            resetState()
-        }
+        resetState()
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -208,8 +211,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.5
     }
-    
-    // UICollectionView
+
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension ViewController: UICollectionViewDataSource {
+
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Category.getAll().count
     }
@@ -219,7 +227,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.setText(Category.getAll()[indexPath.row].key)
         return cell
     }
-    
+
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension ViewController: UICollectionViewDelegate {
+
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
 
@@ -233,20 +247,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.autocompletionItemsName.append(str!)
         }
         self.autocompletionTableView.reloadData()
-        self.autocompletionItemsHeight.constant = increasedAutoCompletionHeight
         self.isCategoryOpen = true
         UIView.animateWithDuration(0.25) {
             self.autocompletionTableView.hidden = false
             self.categoriesCollectionView.hidden = true
         }
     }
-    
-    // UITextField Delegate
+
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         resetState()
         resetTextField(true)
+
         return true
     }
-}
 
+}
