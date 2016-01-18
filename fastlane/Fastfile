@@ -12,7 +12,7 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     increment_build_number
-    commit_version_bump(force: true)
+    commit_version_bump(force: true, xcodeproj: "Themoji.xcodeproj")
 
     match(type: "adhoc")
     gym(scheme: "Themoji")
