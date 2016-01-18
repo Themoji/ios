@@ -63,8 +63,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         // full screen mode
-        resetState()
-        resetTextField()
+        self.autocompletionTableView.hidden = true
+        self.autocompletionItemsHeight.constant = defaultAutoCompletionHeight
+        resetTextField(true)
         
         self.emojiHeightConstraint.constant = self.view.bounds.height
         UIView.animateWithDuration(0.25, animations: { () -> Void in
@@ -95,7 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else {
             // dismiss keyboard and so on
             self.textInput.resignFirstResponder()
-            self.resetTextField()
+            self.resetTextField(true)
             self.autocompletionTableView.hidden = true
             resetState()
         }
@@ -107,7 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if emojiToText(input) != nil
             {
                 setCurrentEmoji("\(input)")
-                resetTextField()
+                resetTextField(false)
             }
             else
             {
@@ -131,9 +132,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Modifying the UI
     
-    func resetTextField() {
+    func resetTextField(dismissKeyboard: Bool) {
         self.textInput.text = ""
-        self.textInput.resignFirstResponder()
+        if dismissKeyboard {
+            self.textInput.resignFirstResponder()
+        }
     }
     
     func setCurrentEmoji(e: String) {
@@ -230,7 +233,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         resetState()
-        resetTextField()
+        resetTextField(true)
         return true
     }
 }
