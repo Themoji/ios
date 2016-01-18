@@ -33,3 +33,4 @@ DerivedData
 Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
+Preview.html
