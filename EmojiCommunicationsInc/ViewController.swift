@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
     let emojiLabelHeight: CGFloat = 300
+    
+    var emojiFetcher: EmojiFetcher = EmojiFetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,9 +127,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             else
             {
                 let searchString = self.textInput.text!.lowercaseString // all chars since the last match
-                let fetcher = EmojiFetcher()
                 
-                fetcher.query(searchString) { emojiResults in
+                emojiFetcher.cancelFetches()
+                emojiFetcher.query(searchString) { emojiResults in
                     self.autocompletionItemsName = []
                     self.autocompletionItemsEmoji = []
                     for (emoji) in emojiResults {

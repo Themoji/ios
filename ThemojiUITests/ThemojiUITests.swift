@@ -30,7 +30,7 @@ class ThemojiUITests: XCTestCase {
         
         let searchEmojiTextField = app.textFields["Search Emoji"]
         searchEmojiTextField.tap()
-        searchEmojiTextField.typeText("air")
+        searchEmojiTextField.typeText("ai")
         snapshot("04Filter")
     }
 }
