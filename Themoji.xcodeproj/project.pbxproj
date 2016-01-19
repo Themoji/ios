@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		12B04C654DEF3445DFA1B766 /* Pods_Themoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F4D11D4E94209B69C962 /* Pods_Themoji.framework */; };
-		CA8E13321C48CEE600FB865B /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13311C48CEE600FB865B /* CategoryButton.swift */; };
-		CA8E13341C48D72A00FB865B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13331C48D72A00FB865B /* Category.swift */; };
-		CA8E13361C48DA8100FB865B /* CategoryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8E13351C48DA8100FB865B /* CategoryButton.xib */; };
+		CA659AD91C4DCB2700A4C7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */; };
+		CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */; };
+		CA659ADB1C4DCB2700A4C7EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD01C4DCB2700A4C7EF /* LaunchScreen.storyboard */; };
+		CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD21C4DCB2700A4C7EF /* Main.storyboard */; };
+		CA659ADD1C4DCB2700A4C7EF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD41C4DCB2700A4C7EF /* Category.swift */; };
+		CA659ADE1C4DCB2700A4C7EF /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD51C4DCB2700A4C7EF /* CategoryButton.swift */; };
+		CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */; };
+		CA659AE01C4DCB2700A4C7EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD71C4DCB2700A4C7EF /* Info.plist */; };
+		CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD81C4DCB2700A4C7EF /* ViewController.swift */; };
 		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
 		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
-		CAB6C1191C3C16E200BDB0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */; };
-		CAB6C11B1C3C16E200BDB0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */; };
-		CAB6C11E1C3C16E200BDB0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */; };
-		CAB6C1201C3C16E200BDB0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */; };
-		CAB6C1231C3C16E200BDB0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,20 +56,20 @@
 
 /* Begin PBXFileReference section */
 		31055849A4E223D342113252 /* Pods-Themoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.release.xcconfig"; sourceTree = "<group>"; };
-		CA8E13311C48CEE600FB865B /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
-		CA8E13331C48D72A00FB865B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		CA8E13351C48DA8100FB865B /* CategoryButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButton.xib; sourceTree = "<group>"; };
+		CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA659AD11C4DCB2700A4C7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA659AD31C4DCB2700A4C7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA659AD41C4DCB2700A4C7EF /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CA659AD51C4DCB2700A4C7EF /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButton.xib; sourceTree = "<group>"; };
+		CA659AD71C4DCB2700A4C7EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA659AD81C4DCB2700A4C7EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8E13491C4C760900FB865B /* ThemojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemojiUITests.swift; sourceTree = "<group>"; };
 		CA8E134B1C4C760900FB865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8E13511C4C761500FB865B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CAB6C1151C3C16E200BDB0F0 /* Themoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CAB6C11D1C3C16E200BDB0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAB6C1221C3C16E200BDB0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CAB6C1241C3C16E200BDB0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F2F4D11D4E94209B69C962 /* Pods_Themoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Themoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA27A293EEE5BA1D70F56885 /* Pods-Themoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +110,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA659ACD1C4DCB2700A4C7EF /* Themoji */ = {
+			isa = PBXGroup;
+			children = (
+				CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */,
+				CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */,
+				CA659AD01C4DCB2700A4C7EF /* LaunchScreen.storyboard */,
+				CA659AD21C4DCB2700A4C7EF /* Main.storyboard */,
+				CA659AD41C4DCB2700A4C7EF /* Category.swift */,
+				CA659AD51C4DCB2700A4C7EF /* CategoryButton.swift */,
+				CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */,
+				CA659AD71C4DCB2700A4C7EF /* Info.plist */,
+				CA659AD81C4DCB2700A4C7EF /* ViewController.swift */,
+			);
+			path = Themoji;
+			sourceTree = "<group>";
+		};
 		CA8E13481C4C760900FB865B /* ThemojiUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +139,7 @@
 		CAB6C10C1C3C16E200BDB0F0 = {
 			isa = PBXGroup;
 			children = (
-				CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */,
+				CA659ACD1C4DCB2700A4C7EF /* Themoji */,
 				CA8E13481C4C760900FB865B /* ThemojiUITests */,
 				CAB6C1161C3C16E200BDB0F0 /* Products */,
 				0AA4A26E6DA01FB035EADD8E /* Pods */,
@@ -137,22 +154,6 @@
 				CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CAB6C1171C3C16E200BDB0F0 /* EmojiCommunicationsInc */ = {
-			isa = PBXGroup;
-			children = (
-				CAB6C1181C3C16E200BDB0F0 /* AppDelegate.swift */,
-				CAB6C11A1C3C16E200BDB0F0 /* ViewController.swift */,
-				CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */,
-				CAB6C11F1C3C16E200BDB0F0 /* Assets.xcassets */,
-				CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */,
-				CAB6C1241C3C16E200BDB0F0 /* Info.plist */,
-				CA8E13311C48CEE600FB865B /* CategoryButton.swift */,
-				CA8E13351C48DA8100FB865B /* CategoryButton.xib */,
-				CA8E13331C48D72A00FB865B /* Category.swift */,
-			);
-			path = EmojiCommunicationsInc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,10 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB6C1231C3C16E200BDB0F0 /* LaunchScreen.storyboard in Resources */,
-				CA8E13361C48DA8100FB865B /* CategoryButton.xib in Resources */,
-				CAB6C1201C3C16E200BDB0F0 /* Assets.xcassets in Resources */,
-				CAB6C11E1C3C16E200BDB0F0 /* Main.storyboard in Resources */,
+				CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */,
+				CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */,
+				CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */,
+				CA659AE01C4DCB2700A4C7EF /* Info.plist in Resources */,
+				CA659ADB1C4DCB2700A4C7EF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,10 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA8E13321C48CEE600FB865B /* CategoryButton.swift in Sources */,
-				CA8E13341C48D72A00FB865B /* Category.swift in Sources */,
-				CAB6C11B1C3C16E200BDB0F0 /* ViewController.swift in Sources */,
-				CAB6C1191C3C16E200BDB0F0 /* AppDelegate.swift in Sources */,
+				CA659ADE1C4DCB2700A4C7EF /* CategoryButton.swift in Sources */,
+				CA659AD91C4DCB2700A4C7EF /* AppDelegate.swift in Sources */,
+				CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */,
+				CA659ADD1C4DCB2700A4C7EF /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,20 +340,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CAB6C11C1C3C16E200BDB0F0 /* Main.storyboard */ = {
+		CA659AD01C4DCB2700A4C7EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CAB6C11D1C3C16E200BDB0F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CAB6C1211C3C16E200BDB0F0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAB6C1221C3C16E200BDB0F0 /* Base */,
+				CA659AD11C4DCB2700A4C7EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CA659AD21C4DCB2700A4C7EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA659AD31C4DCB2700A4C7EF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -477,7 +479,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = EmojiCommunicationsInc/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Themoji/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
@@ -498,7 +500,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = EmojiCommunicationsInc/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Themoji/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
@@ -518,6 +520,7 @@
 				CA8E134F1C4C760900FB865B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAB6C1101C3C16E200BDB0F0 /* Build configuration list for PBXProject "Themoji" */ = {
 			isa = XCConfigurationList;
