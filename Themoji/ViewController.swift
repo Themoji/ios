@@ -91,7 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         UIPasteboard.generalPasteboard().string = self.emojiLabel.text!
         
         if !PKHUD.sharedHUD.isVisible {
-            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied \(self.emojiLabel.text!) to clipboard")
+            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Copied to clipboard")
             PKHUD.sharedHUD.show()
             PKHUD.sharedHUD.hide(afterDelay: 1.0)
         }
