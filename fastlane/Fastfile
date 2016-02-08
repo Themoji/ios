@@ -3,13 +3,19 @@ fastlane_version "1.50.0"
 default_platform :ios
 
 platform :ios do
+
   desc "Set up a new Mac"
-  lane :bootstrap do
-    register_devices(devices: {
-      "Felix Krause's iPhone 6s": "116307ad03065412b3084f4dc8498922e0214e73"
-    })
-    match(type: "development")
-    match(type: "appstore")
+  desc "To run this in readonly mode without user credentials use"
+  desc "fastlane bootstrap readonly:true"
+  lane :bootstrap do |options|
+    unless options[:readonly]
+      register_devices(devices: {
+        "Felix Krause's iPhone 6s": "116307ad03065412b3084f4dc8498922e0214e73"
+      })
+    end
+
+    match(type: "development", readonly: options[:readonly])
+    match(type: "appstore", readonly: options[:readonly])
   end
 
   desc "Runs all the tests"
