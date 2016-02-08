@@ -3,6 +3,15 @@ fastlane_version "1.50.0"
 default_platform :ios
 
 platform :ios do
+  desc "Set up a new Mac"
+  lane :bootstrap do
+    register_devices(devices: {
+      "Felix Krause's iPhone 6s": "116307ad03065412b3084f4dc8498922e0214e73"
+    })
+    match(type: "development")
+    match(type: "appstore")
+  end
+
   desc "Runs all the tests"
   lane :test do
     scan
