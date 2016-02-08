@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
 
-@interface FontTest : NSObject
+@interface FontRendering : NSObject
 
 + (UIImage *)testImageForEmojiString:(NSString *)emojiString withFont:(CTFontRef)ctFont;
 

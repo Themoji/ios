@@ -6,9 +6,9 @@
 //  Copyright © 2016 Felix Krause. All rights reserved.
 //
 
-#import "FontTest.h"
+#import "FontRendering.h"
 
-@implementation FontTest
+@implementation FontRendering
 
 + (UIImage *)testImageForEmojiString:(NSString *)emojiString withFont:(CTFontRef)ctFont {
     UniChar *characters = malloc(sizeof(UniChar) * [emojiString length]);

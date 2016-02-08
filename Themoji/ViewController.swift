@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("uifont is \(uifont)")
         self.emojiLabel.font = uifont
         
-        let image = FontTest.testImageForEmojiString("🍕", withFont: ctfont)
+        let image = FontRendering.testImageForEmojiString("🍕", withFont: ctfont)
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 0, y: 22, width: image.size.width, height: image.size.height)
         self.view.addSubview(imageView)
