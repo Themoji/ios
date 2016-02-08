@@ -19,6 +19,8 @@
 		CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD81C4DCB2700A4C7EF /* ViewController.swift */; };
 		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
 		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
+		CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */; };
+		CADF5C641C6829D30035D126 /* FontRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF5C631C6829D30035D126 /* FontRendering.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		CA8E134B1C4C760900FB865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8E13511C4C761500FB865B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CAB6C1151C3C16E200BDB0F0 /* Themoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Color Emoji.ttf"; sourceTree = "<group>"; };
+		CADF5C611C6829D20035D126 /* Themoji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Themoji-Bridging-Header.h"; sourceTree = "<group>"; };
+		CADF5C621C6829D30035D126 /* FontRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontRendering.h; sourceTree = "<group>"; };
+		CADF5C631C6829D30035D126 /* FontRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontRendering.m; sourceTree = "<group>"; };
 		D1F2F4D11D4E94209B69C962 /* Pods_Themoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Themoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA27A293EEE5BA1D70F56885 /* Pods-Themoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +119,10 @@
 		CA659ACD1C4DCB2700A4C7EF /* Themoji */ = {
 			isa = PBXGroup;
 			children = (
+				CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */,
 				CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */,
+				CADF5C621C6829D30035D126 /* FontRendering.h */,
+				CADF5C631C6829D30035D126 /* FontRendering.m */,
 				CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */,
 				CA659AD01C4DCB2700A4C7EF /* LaunchScreen.storyboard */,
 				CA659AD21C4DCB2700A4C7EF /* Main.storyboard */,
@@ -122,6 +131,7 @@
 				CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */,
 				CA659AD71C4DCB2700A4C7EF /* Info.plist */,
 				CA659AD81C4DCB2700A4C7EF /* ViewController.swift */,
+				CADF5C611C6829D20035D126 /* Themoji-Bridging-Header.h */,
 			);
 			path = Themoji;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */,
 				CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */,
 				CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */,
 				CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */,
@@ -324,6 +335,7 @@
 			files = (
 				CA659ADE1C4DCB2700A4C7EF /* CategoryButton.swift in Sources */,
 				CA659AD91C4DCB2700A4C7EF /* AppDelegate.swift in Sources */,
+				CADF5C641C6829D30035D126 /* FontRendering.m in Sources */,
 				CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */,
 				CA659ADD1C4DCB2700A4C7EF /* Category.swift in Sources */,
 			);
@@ -473,6 +485,7 @@
 			baseConfigurationReference = FA27A293EEE5BA1D70F56885 /* Pods-Themoji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -485,6 +498,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
 				PRODUCT_NAME = Themoji;
 				PROVISIONING_PROFILE = "1806b02a-c11d-4129-9439-66ddf624f5c8";
+				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -494,6 +509,7 @@
 			baseConfigurationReference = 31055849A4E223D342113252 /* Pods-Themoji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -506,6 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
 				PRODUCT_NAME = Themoji;
 				PROVISIONING_PROFILE = "1806b02a-c11d-4129-9439-66ddf624f5c8";
+				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
