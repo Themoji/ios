@@ -11,6 +11,8 @@
 
 @interface FontRendering : NSObject
 
-+ (UIImage *)testImageForEmojiString:(NSString *)emojiString withFont:(CTFontRef)ctFont;
++ (CTFontRef)highResolutionEmojiFontSize:(CGFloat)size;
++ (UIFont *)highResolutionEmojiUIFontSize:(CGFloat)size;
++ (UIImage *)testImageForEmojiString:(NSString *)emojiString;
 
 @end

@@ -15,6 +15,7 @@ class CategoryButton: UICollectionViewCell {
         self.layer.cornerRadius = 9.0
         self.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.layer.borderWidth = 1.0
+        self.titleLabel.font = FontRendering.highResolutionEmojiUIFontSize(self.titleLabel.font.pointSize)
     }
     
     func setText(str: String) {

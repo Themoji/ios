@@ -40,25 +40,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
         self.emojiHeightConstraint.constant = emojiLabelHeight
-        
-        let URL = NSBundle.mainBundle().URLForResource("Apple Color Emoji", withExtension: "ttf")!
-        let contents = NSData(contentsOfURL: URL)!
-        print("url \(URL) contents \(contents.length)")
-        
-        let cgfont = CGFontCreateWithDataProvider(
-            CGDataProviderCreateWithCFData(contents as CFDataRef)
-            )!
-        print("cgfont \(cgfont)")
-        
-        let ctfont = CTFontCreateWithGraphicsFont(cgfont, 256, nil, nil)
-        let uifont = ctfont as UIFont
-        print("uifont is \(uifont)")
-        self.emojiLabel.font = uifont
-        
-        let image = FontRendering.testImageForEmojiString("🍕", withFont: ctfont)
-        let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: 0, y: 22, width: image.size.width, height: image.size.height)
-        self.view.addSubview(imageView)
+
+        self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(512)
+        FontRendering.testImageForEmojiString("🍕") // we need to render one pizza to solve all the problems
     }
     
     func keyboardWillShow(notification: NSNotification) {

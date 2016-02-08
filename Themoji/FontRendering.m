@@ -10,7 +10,23 @@
 
 @implementation FontRendering
 
-+ (UIImage *)testImageForEmojiString:(NSString *)emojiString withFont:(CTFontRef)ctFont {
++ (CTFontRef)highResolutionEmojiFontSize:(CGFloat)size
+{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Apple Color Emoji" withExtension:@"ttf"];
+    NSData *contents = [NSData dataWithContentsOfURL:url];
+    CGFontRef cgfont = CGFontCreateWithDataProvider(CGDataProviderCreateWithCFData((CFDataRef) contents));
+    return CTFontCreateWithGraphicsFont(cgfont, size, nil, nil);// 256
+}
+
++ (UIFont *)highResolutionEmojiUIFontSize:(CGFloat)size
+{
+    return (UIFont *)[self highResolutionEmojiFontSize:size];
+}
+
++ (UIImage *)testImageForEmojiString:(NSString *)emojiString
+{
+    CTFontRef ctFont = [self highResolutionEmojiFontSize:256.0];
+
     UniChar *characters = malloc(sizeof(UniChar) * [emojiString length]);
     [emojiString getCharacters:characters range:NSMakeRange(0, [emojiString length])];
     
