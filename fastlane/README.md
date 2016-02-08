@@ -11,6 +11,10 @@ sudo gem install fastlane
 fastlane ios bootstrap
 ```
 Set up a new Mac
+
+To run this in readonly mode without user credentials use
+
+fastlane bootstrap readonly:true
 ### ios test
 ```
 fastlane ios test
