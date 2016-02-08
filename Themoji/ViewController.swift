@@ -188,9 +188,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let str = "\(self.autocompletionItemsEmoji[indexPath.row]) \(self.autocompletionItemsName[indexPath.row].capitalizedString)"
-        cell.textLabel?.text = str
+        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "Yoo")
+//        let str = "\(self.autocompletionItemsEmoji[indexPath.row]) \(self.autocompletionItemsName[indexPath.row].capitalizedString)"
+        cell.textLabel?.text = self.autocompletionItemsEmoji[indexPath.row]
+        cell.textLabel?.font = FontRendering.highResolutionEmojiUIFontSize((cell.textLabel?.font.pointSize)!);
+        cell.detailTextLabel?.text = self.autocompletionItemsName[indexPath.row].capitalizedString
+        
         return cell
     }
     
