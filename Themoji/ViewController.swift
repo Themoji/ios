@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var autocompletionTableView: UITableView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
     
     @IBOutlet weak var emojiHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var autocompletionItemsHeight: NSLayoutConstraint!
@@ -28,6 +30,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
     let emojiLabelHeight: CGFloat = 400 // this is NOT the font size
+    
+    let emojiHistoryKey = "emojiHistory"
     
     var emojiFetcher: EmojiFetcher = EmojiFetcher()
 
@@ -71,6 +75,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.autocompletionTableView.hidden = true
         self.autocompletionItemsHeight.constant = defaultAutoCompletionHeight
         resetTextField(true)
+        self.historyButton.hidden = true
+        self.searchButton.hidden = true // has to be after resetTextField
         
         self.emojiHeightConstraint.constant = self.view.bounds.height
         UIView.animateWithDuration(0.25, animations: { () -> Void in
@@ -83,6 +89,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.textInput.hidden = true
         }
         isFullScreen = true
+    }
+    @IBAction func didTapHistory(sender: AnyObject) {
+        if let recent = NSUserDefaults.standardUserDefaults().arrayForKey(emojiHistoryKey) as? [String] {
+            prefillAutoCompletion(recent.joinWithSeparator(""))
+        }
+        else {
+            
+        }
+    }
+    
+    @IBAction func didTapSearch(sender: AnyObject) {
+        self.textInput.hidden = false
+        self.searchButton.hidden = true
+        self.historyButton.hidden = true
+        self.textInput.becomeFirstResponder()
     }
 
     @IBAction func didLongPressEmoji(sender: AnyObject) {
@@ -100,7 +121,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if isFullScreen {
             self.emojiHeightConstraint.constant = emojiLabelHeight
             self.categoriesCollectionView.hidden = false
-            self.textInput.hidden = false
+            self.searchButton.hidden = false
+            self.historyButton.hidden = false
 
             UIView.animateWithDuration(0.25, animations: { () -> Void in
                 self.categoriesCollectionView.alpha = 1.0
@@ -111,7 +133,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         else {
             // dismiss keyboard and so on
-            self.textInput.resignFirstResponder()
             self.resetTextField(true)
             self.autocompletionTableView.hidden = true
             resetState()
@@ -151,12 +172,50 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func resetTextField(dismissKeyboard: Bool) {
         self.textInput.text = ""
         if dismissKeyboard {
-            self.textInput.resignFirstResponder()
+            dismissSearch()
         }
     }
     
+    func prefillAutoCompletion(emojis: String) {
+        self.autocompletionItemsEmoji = []
+        self.autocompletionItemsName = []
+        
+        for (emoji) in emojis.characters {
+            self.autocompletionItemsEmoji.append("\(emoji)")
+            let str = emojiToText(emoji)
+            self.autocompletionItemsName.append(str!)
+        }
+        self.autocompletionTableView.reloadData()
+        self.autocompletionItemsHeight.constant = increasedAutoCompletionHeight
+        self.isCategoryOpen = true
+        self.searchButton.hidden = true
+        self.historyButton.hidden = true
+        UIView.animateWithDuration(0.25) {
+            self.autocompletionTableView.hidden = false
+            self.categoriesCollectionView.hidden = true
+        }
+    }
+    
+    func dismissSearch() {
+        self.textInput.resignFirstResponder()
+        self.searchButton.hidden = false
+        self.historyButton.hidden = false
+        self.textInput.hidden = true
+    }
+    
     func setCurrentEmoji(e: String) {
+        self.textInput.hidden = true
         self.emojiLabel.text = e
+
+        if var recent = NSUserDefaults.standardUserDefaults().objectForKey(emojiHistoryKey) {
+            recent = recent.mutableCopy()
+            recent.removeObject(e)
+            recent.insertObject(e, atIndex: 0)
+            NSUserDefaults.standardUserDefaults().setObject(recent, forKey: emojiHistoryKey)
+        }
+        else {
+            NSUserDefaults.standardUserDefaults().setObject([e], forKey: emojiHistoryKey)
+        }
     }
     
     func resetState() {
@@ -164,6 +223,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.autocompletionItemsHeight.constant = defaultAutoCompletionHeight
         self.isCategoryOpen = false
         self.categoriesCollectionView.hidden = false
+        self.searchButton.hidden = false
+        self.historyButton.hidden = false
     }
     
     func emojiToText(c: Character) -> String? {
@@ -231,26 +292,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
 
         let results = Category.getAll()[indexPath.row].value
-        self.autocompletionItemsEmoji = []
-        self.autocompletionItemsName = []
-
-        for (emoji) in results.characters {
-            self.autocompletionItemsEmoji.append("\(emoji)")
-            let str = emojiToText(emoji)
-            self.autocompletionItemsName.append(str!)
-        }
-        self.autocompletionTableView.reloadData()
-        self.autocompletionItemsHeight.constant = increasedAutoCompletionHeight
-        self.isCategoryOpen = true
-        UIView.animateWithDuration(0.25) {
-            self.autocompletionTableView.hidden = false
-            self.categoriesCollectionView.hidden = true
-        }
+        prefillAutoCompletion(results)
     }
+
     
     // UITextField Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        self.dismissSearch()
         resetState()
         resetTextField(true)
         return true

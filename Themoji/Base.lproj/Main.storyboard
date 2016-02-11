@@ -47,7 +47,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vfn-pl-uuN"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Emoji" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-Tw-RHw">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Emoji" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-Tw-RHw">
                                 <rect key="frame" x="20" y="565" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Kds-Xe-P5g"/>
@@ -83,13 +83,53 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0y1-gB-CNf"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Aa-cJ-RHK">
+                                <rect key="frame" x="20" y="565" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="63Q-Ww-yAh"/>
+                                    <constraint firstAttribute="height" constant="30" id="e86-ik-Dq8"/>
+                                    <constraint firstAttribute="width" constant="280" id="jF0-0F-hrA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Search"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e86-ik-Dq8"/>
+                                        <exclude reference="jF0-0F-hrA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WiD-02-GX5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-YW-HfR" userLabel="History">
+                                <rect key="frame" x="300" y="565" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5tz-L9-fvL"/>
+                                    <constraint firstAttribute="height" constant="30" id="Y9o-xr-yYQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="YRf-kJ-mHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="History"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Y9o-xr-yYQ"/>
+                                        <exclude reference="YRf-kJ-mHU"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnu-f0-Qhg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1Aa-cJ-RHK" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" id="11v-I2-wBL"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="top" id="1ef-tt-h1E"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="leading" secondItem="1ag-zn-XJQ" secondAttribute="trailing" id="1zM-zG-X9x"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Ea-ZO-5iV"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="leading" secondItem="1ag-zn-XJQ" secondAttribute="leading" id="6mK-wF-Gzv"/>
+                            <constraint firstItem="1Aa-cJ-RHK" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="7Gb-IP-JpP"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="7ot-v6-ehq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="Ba7-ky-eVI"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="-5" id="BwD-p7-peo"/>
@@ -98,16 +138,26 @@
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="jL4-8m-amg" secondAttribute="bottom" constant="5" id="GGz-Gt-nyB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yJi-Tw-RHw" secondAttribute="bottom" constant="5" id="JV2-S2-reD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="316" id="Kj2-rH-y6d"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="leading" secondItem="1Aa-cJ-RHK" secondAttribute="trailing" id="M6n-c3-Z3Q"/>
+                            <constraint firstItem="1Aa-cJ-RHK" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" id="OOd-XB-tkT"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" id="PKo-B2-7jh"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" id="QLf-1T-YCJ"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="leading" secondItem="1Aa-cJ-RHK" secondAttribute="trailing" id="SkW-hN-zus"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="UZN-d0-Q1t"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="VRR-UG-mll"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="Zah-74-WLF"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="top" secondItem="3iE-A2-5xX" secondAttribute="bottom" id="cBG-af-SoK"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="cYj-mt-cVV"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dYO-X3-9YM"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="width" secondItem="1ag-zn-XJQ" secondAttribute="width" id="f5F-jE-b3e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6WK-YW-HfR" secondAttribute="trailing" constant="3" id="h96-Wd-Xa5"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" constant="-18" id="hQk-mA-ZY0"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heb-bB-FKn"/>
+                            <constraint firstItem="6WK-YW-HfR" firstAttribute="width" secondItem="1Aa-cJ-RHK" secondAttribute="width" id="kkA-Cm-yeq"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" id="lBG-z4-PK0"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" constant="18" id="mmz-Cd-3Hn"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="height" secondItem="1ag-zn-XJQ" secondAttribute="height" id="pKz-YR-Abb"/>
+                            <constraint firstItem="1Aa-cJ-RHK" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="qED-Iz-8uC"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tRc-Pg-zII"/>
                         </constraints>
                         <variation key="default">
@@ -116,9 +166,15 @@
                                 <exclude reference="PKo-B2-7jh"/>
                                 <exclude reference="f5F-jE-b3e"/>
                                 <exclude reference="BwD-p7-peo"/>
+                                <exclude reference="11v-I2-wBL"/>
+                                <exclude reference="qED-Iz-8uC"/>
                                 <exclude reference="QLf-1T-YCJ"/>
                                 <exclude reference="heb-bB-FKn"/>
                                 <exclude reference="Kj2-rH-y6d"/>
+                                <exclude reference="SkW-hN-zus"/>
+                                <exclude reference="VRR-UG-mll"/>
+                                <exclude reference="Zah-74-WLF"/>
+                                <exclude reference="h96-Wd-Xa5"/>
                             </mask>
                         </variation>
                     </view>
@@ -129,6 +185,8 @@
                         <outlet property="categoriesCollectionView" destination="3iE-A2-5xX" id="ujK-JA-lc8"/>
                         <outlet property="emojiHeightConstraint" destination="mHA-O8-8m5" id="P3Q-20-Iaz"/>
                         <outlet property="emojiLabel" destination="1ag-zn-XJQ" id="13g-cx-IOT"/>
+                        <outlet property="historyButton" destination="6WK-YW-HfR" id="VpB-Xm-EGb"/>
+                        <outlet property="searchButton" destination="1Aa-cJ-RHK" id="uCm-Rp-xX3"/>
                         <outlet property="textInput" destination="yJi-Tw-RHw" id="dUN-T7-G6H"/>
                     </connections>
                 </viewController>
