@@ -67,6 +67,7 @@
 		CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButton.xib; sourceTree = "<group>"; };
 		CA659AD71C4DCB2700A4C7EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA659AD81C4DCB2700A4C7EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA7FC8061C6C5D2600706C82 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
 		CA8E13471C4C760900FB865B /* ThemojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8E13491C4C760900FB865B /* ThemojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemojiUITests.swift; sourceTree = "<group>"; };
 		CA8E134B1C4C760900FB865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		CAB6C10C1C3C16E200BDB0F0 = {
 			isa = PBXGroup;
 			children = (
+				CA7FC8061C6C5D2600706C82 /* Fastfile */,
 				CA659ACD1C4DCB2700A4C7EF /* Themoji */,
 				CA8E13481C4C760900FB865B /* ThemojiUITests */,
 				CAB6C1161C3C16E200BDB0F0 /* Products */,
@@ -489,12 +491,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Themoji/Info.plist";
+				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
@@ -513,12 +515,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Themoji/Info.plist";
+				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
