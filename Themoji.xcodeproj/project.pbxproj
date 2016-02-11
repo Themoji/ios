@@ -512,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -523,7 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "872ae6e4-c0de-4b70-b10c-9eba4c012e74";
+				PROVISIONING_PROFILE = "$(sigh_me.themoji.app_appstore)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
