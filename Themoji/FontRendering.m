@@ -10,11 +10,19 @@
 
 @implementation FontRendering
 
++ (CFDataRef)rawFile {
+    static NSData *cachedData = nil;
+    if (cachedData) {
+        return (__bridge CFDataRef)cachedData;
+    }
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Apple Color Emoji" withExtension:@"ttf"];
+    cachedData = [NSData dataWithContentsOfURL:url];
+    return (__bridge CFDataRef)cachedData;
+}
+
 + (CTFontRef)highResolutionEmojiFontSize:(CGFloat)size
 {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Apple Color Emoji" withExtension:@"ttf"];
-    NSData *contents = [NSData dataWithContentsOfURL:url];
-    CGFontRef cgfont = CGFontCreateWithDataProvider(CGDataProviderCreateWithCFData((CFDataRef) contents));
+    CGFontRef cgfont = CGFontCreateWithDataProvider(CGDataProviderCreateWithCFData([self rawFile]));
     return CTFontCreateWithGraphicsFont(cgfont, size, nil, nil);// 256
 }
 
@@ -23,9 +31,11 @@
     return (UIFont *)[self highResolutionEmojiFontSize:size];
 }
 
-+ (UIImage *)testImageForEmojiString:(NSString *)emojiString
++ (UIImage *)render:(NSString *)emojiString size:(CGFloat)size
 {
-    CTFontRef ctFont = [self highResolutionEmojiFontSize:256.0];
+    // size should be maximum of 256.0f
+
+    CTFontRef ctFont = [self highResolutionEmojiFontSize:size];
 
     UniChar *characters = malloc(sizeof(UniChar) * [emojiString length]);
     [emojiString getCharacters:characters range:NSMakeRange(0, [emojiString length])];
@@ -36,7 +46,6 @@
     CGRect bounds = CTFontGetBoundingRectsForGlyphs(ctFont, kCTFontOrientationHorizontal, glyphs, NULL, 1);
     CGPoint point = CGPointApplyAffineTransform(bounds.origin, CGAffineTransformMakeScale(-1, -1));
     
-    CGFloat size = 256.0f;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(size, size), NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     

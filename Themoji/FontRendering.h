@@ -13,6 +13,6 @@
 
 + (CTFontRef)highResolutionEmojiFontSize:(CGFloat)size;
 + (UIFont *)highResolutionEmojiUIFontSize:(CGFloat)size;
-+ (UIImage *)testImageForEmojiString:(NSString *)emojiString;
++ (UIImage *)render:(NSString *)emojiString size:(CGFloat)size;
 
 @end
