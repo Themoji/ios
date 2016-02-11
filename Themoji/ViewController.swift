@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
         self.emojiHeightConstraint.constant = emojiLabelHeight
 
-        self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(256)
+        self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(384)
     }
     
     func keyboardWillShow(notification: NSNotification) {
