@@ -41,8 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
         self.emojiHeightConstraint.constant = emojiLabelHeight
 
-        self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(512)
-        FontRendering.testImageForEmojiString("🍕") // we need to render one pizza to solve all the problems
+        self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(256)
     }
     
     func keyboardWillShow(notification: NSNotification) {
