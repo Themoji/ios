@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
-    let emojiLabelHeight: CGFloat = 300
+    let emojiLabelHeight: CGFloat = 400 // this is NOT the font size
     
     var emojiFetcher: EmojiFetcher = EmojiFetcher()
 
