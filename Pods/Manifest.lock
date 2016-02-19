@@ -1,13 +1,20 @@
 PODS:
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
   - EmojiKit (0.0.1)
+  - Fabric (1.6.5)
   - PKHUD (2.2.5)
 
 DEPENDENCIES:
+  - Crashlytics
   - EmojiKit
+  - Fabric
   - PKHUD
 
 SPEC CHECKSUMS:
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   EmojiKit: 5e544c85753b1027f7335a75168e5bfade705f06
+  Fabric: 338ffd3c2afcab120638907b4251189de9ad17b3
   PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
 
 COCOAPODS: 0.39.0

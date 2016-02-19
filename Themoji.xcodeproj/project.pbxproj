@@ -416,8 +416,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -463,7 +462,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -490,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,9 +497,9 @@
 				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
+				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "872ae6e4-c0de-4b70-b10c-9eba4c012e74";
+				PROVISIONING_PROFILE = "$(sigh_me.themoji.app.beta_appstore)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,9 +521,9 @@
 				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app;
+				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "$(sigh_me.themoji.app_appstore)";
+				PROVISIONING_PROFILE = "$(sigh_me.themoji.app.beta_appstore)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

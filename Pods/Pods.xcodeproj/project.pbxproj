@@ -9,36 +9,36 @@
 /* Begin PBXBuildFile section */
 		053FB55B2A6FB8695A6DC4B8A2CEE4A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		0682C731DEB65B4AA75B3219BCFEEB7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		08C53D9CFEC64410ABDE4BFB0EBAF367 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923CDEA6CA319FFA07B2A5537F14944 /* PKHUDProgressView.swift */; };
-		120FA929E56FD08CC46AE0C44DE44E83 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E78C4B6084EB8FE0CEF2A29E1ED14E /* PKHUDTextView.swift */; };
-		15849626C654E18F547D6AFBFA647247 /* EmojiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5460A703D63D71B989F534F166C0CD2 /* EmojiFetcher.swift */; };
-		16DDDEF8D2D736FD35EC15F9F2DFD593 /* PKHUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C588A49B785A46B03B655F29A6DD0 /* PKHUDStatusView.swift */; };
-		2424F5F0B764C20C504F99DF5E867F10 /* EmojiKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC7AB834D1F0652B12EF5D0D44D7A4 /* EmojiKit-dummy.m */; };
-		244D8CEC4BDFF80DACC4E3E619870CB5 /* PKHUDSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680FA5F75380B8613AAF68B6F7C8CE /* PKHUDSubtitleView.swift */; };
-		3D042516DCF13F0F44727F9882AE93D0 /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8CF01EAD985FCA7779F0E3CD2F885 /* DictionarySerialization.swift */; };
+		08C53D9CFEC64410ABDE4BFB0EBAF367 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8138C46D0A06AF1B06209163F5299 /* PKHUDProgressView.swift */; };
+		120FA929E56FD08CC46AE0C44DE44E83 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F38D936934B2ED6FD1CD7BADADE212 /* PKHUDTextView.swift */; };
+		15849626C654E18F547D6AFBFA647247 /* EmojiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B174A3A22D64775F9C5B8D26F4C659A7 /* EmojiFetcher.swift */; };
+		16DDDEF8D2D736FD35EC15F9F2DFD593 /* PKHUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC25256304AA8454CE8508234506A484 /* PKHUDStatusView.swift */; };
+		2424F5F0B764C20C504F99DF5E867F10 /* EmojiKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C540B4E0DAAC305FD24989A35C55237 /* EmojiKit-dummy.m */; };
+		244D8CEC4BDFF80DACC4E3E619870CB5 /* PKHUDSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3050C46D4ED566B8BD75F6E3A101DA5 /* PKHUDSubtitleView.swift */; };
+		3D042516DCF13F0F44727F9882AE93D0 /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BD3F780755EBF85B070B051E01641 /* DictionarySerialization.swift */; };
 		3FF49DB44702003657BAAD43C1B944FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		5466909C57E954E8CE24A9E7936E6D23 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F1454712CE1EA1DE0BC54B262F11A7EE /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DD35208E7633AA19668823191ACD38E /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAAB5FDF871799664B07599BCDAEC93 /* PKHUDSquareBaseView.swift */; };
-		69743B3EE27868F1633CBE847C45981C /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC892088750799D704C12C4E72BE4 /* PKHUDSuccessView.swift */; };
-		69B21196C71FC1001C778F6F2EBDFBBB /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950EBC8A83388B0F4B5310D9FE499F5 /* PKHUDAssets.swift */; };
-		6B75173414B763653A5342FC4B0241FA /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE09BABAFE3D4E5B342FF5C5198845 /* PKHUDErrorView.swift */; };
-		77EFDC731322AFE00358CA347AADF5D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B47B4F30899925A3DFAD24753FFA7E1 /* Images.xcassets */; };
-		82EDACC2D2E340EEF8081F7FE239A3EB /* EmojiKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC4EDB1E996AC702839477815735A1E /* EmojiKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92B8C40348475CBA9C8D3272E56A8E44 /* PKHUDTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB934E3CDE8A5869B9D19AD9713BAFE /* PKHUDTitleView.swift */; };
-		941C3B5A02B19960B8FB3B01D5447693 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0B1C641937EDC8B494BF785393F89 /* PKHUD-dummy.m */; };
+		5466909C57E954E8CE24A9E7936E6D23 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = BE24DB30EB3F7577E808F7B5C7E62385 /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DD35208E7633AA19668823191ACD38E /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C48C7324CA78F24D88100382117E6 /* PKHUDSquareBaseView.swift */; };
+		69743B3EE27868F1633CBE847C45981C /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E3F2EE3590AEBC7DC40E76EE24BBE /* PKHUDSuccessView.swift */; };
+		69B21196C71FC1001C778F6F2EBDFBBB /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742F572792F7D2F00E045D9D11EE5B9B /* PKHUDAssets.swift */; };
+		6B75173414B763653A5342FC4B0241FA /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A17F72D50E953D18937BE79CC95972 /* PKHUDErrorView.swift */; };
+		77EFDC731322AFE00358CA347AADF5D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DC6C1BAA5129C2B91EDF41149FC30A /* Images.xcassets */; };
+		82EDACC2D2E340EEF8081F7FE239A3EB /* EmojiKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E115CA8A5277415DF3A5ACBC137F577F /* EmojiKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92B8C40348475CBA9C8D3272E56A8E44 /* PKHUDTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE91F80FC1C9D3DD189DFC8BCFFA2B6 /* PKHUDTitleView.swift */; };
+		941C3B5A02B19960B8FB3B01D5447693 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D36257EFFDE1CE6CFE748D970554325 /* PKHUD-dummy.m */; };
 		9D2A6DA2832193B99E45D5C0F820E063 /* Pods-Themoji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E247A2B63A95D7C45BED1CFBB89C6 /* Pods-Themoji-dummy.m */; };
-		A28302D64EF249E8EC226ABA6C8BC3F4 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B85C6C53C8567A7542C2C300DB9534 /* PKHUDAnimating.swift */; };
-		B2BAA8ADB2CF313AB24AE3CBB945FD2D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ECC2070136D4D46A2D7484E50EF45 /* WindowRootViewController.swift */; };
-		B41B562D25C0FF30087B90FDE72CAACD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 51844D366174A73A2C1E93E4C16B8982 /* AllEmoji.json */; };
-		B7C2A302FA96F182F94CB224931FF7E5 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9B82340FC23CABF1C041EAF9E069B /* FrameView.swift */; };
-		D8322FFDA236121597EA85067AB5FA6A /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7254EA2BA3F60C56C9D1E7167FB473E2 /* PKHUDWideBaseView.swift */; };
-		DFF7D7148924236B019CB92BC050AE85 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C104E8B248A2DB69B276231072AA8D2 /* Emoji.swift */; };
-		E127469344C4FCE87FA4B8B98BC80E75 /* PKHUDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9E3E8480F014407BC2BF1A1415D45 /* PKHUDImageView.swift */; };
+		A28302D64EF249E8EC226ABA6C8BC3F4 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29CAC78A552F3375C9F6933338D6CE5 /* PKHUDAnimating.swift */; };
+		B2BAA8ADB2CF313AB24AE3CBB945FD2D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A064A4A4DA99AEB4664E26C7110786 /* WindowRootViewController.swift */; };
+		B41B562D25C0FF30087B90FDE72CAACD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = F45F8A9D986CE3CAE5C366022497E196 /* AllEmoji.json */; };
+		B7C2A302FA96F182F94CB224931FF7E5 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230BB7BBA456EE074EDF44DBBA849FD7 /* FrameView.swift */; };
+		D8322FFDA236121597EA85067AB5FA6A /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EE82E9326687875D746B8A39753553 /* PKHUDWideBaseView.swift */; };
+		DFF7D7148924236B019CB92BC050AE85 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA21DDD58466EEDAD69104905574AFF /* Emoji.swift */; };
+		E127469344C4FCE87FA4B8B98BC80E75 /* PKHUDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AEEF3D941A1F829E7F0D992ED73AF /* PKHUDImageView.swift */; };
 		ECD75C3E5E6BB4999C47313C38DAD475 /* Pods-Themoji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 650E2A19E4C970C850122DFBE1ACAD47 /* Pods-Themoji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F545089CD5D5C3748E65B6F024D45867 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE95AED992FCA2EED80EB1F10602DB7 /* PKHUD.swift */; };
-		F98ECBD1006DE2FE9E6675BACC41F60C /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221F10CD3785A3D3721F27C5B3FF7FB /* PKHUDSystemActivityIndicatorView.swift */; };
-		FA2E310D8CA58A799D3919B74632BAF8 /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDD1531DCAB51093AAE114507939DD0 /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FADA8B01BDB4F5D9170044BE05A65D45 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE8E0B36DC87E08AF3B852E865E687 /* Window.swift */; };
+		F545089CD5D5C3748E65B6F024D45867 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3EDFD19346DE05A85D33DD3AFAF3F /* PKHUD.swift */; };
+		F98ECBD1006DE2FE9E6675BACC41F60C /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28505276FEFFFE2D9780BBFE8CFDD7DE /* PKHUDSystemActivityIndicatorView.swift */; };
+		FA2E310D8CA58A799D3919B74632BAF8 /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FE598C01226EBB39972B7DE6AFBEF8 /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FADA8B01BDB4F5D9170044BE05A65D45 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF479120A9BFAAE8E5315F77FB3C46E1 /* Window.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,54 +59,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C104E8B248A2DB69B276231072AA8D2 /* Emoji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = EmojiKit/Emoji.swift; sourceTree = "<group>"; };
+		087E3F2EE3590AEBC7DC40E76EE24BBE /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
 		106830D571687EFADAB991C18EFB2A37 /* EmojiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmojiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		13A704F253F1BC06FA4FB8BCDE3E1474 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FE95AED992FCA2EED80EB1F10602DB7 /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
+		10F3EDFD19346DE05A85D33DD3AFAF3F /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
+		230BB7BBA456EE074EDF44DBBA849FD7 /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
+		28505276FEFFFE2D9780BBFE8CFDD7DE /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
 		29D0D1217866DE410D64C4DC689E41FC /* Pods-Themoji-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Themoji-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2B62543FF599387B7F3B611CD430242B /* Pods-Themoji-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Themoji-resources.sh"; sourceTree = "<group>"; };
-		3B47B4F30899925A3DFAD24753FFA7E1 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
-		3DCC7AB834D1F0652B12EF5D0D44D7A4 /* EmojiKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EmojiKit-dummy.m"; sourceTree = "<group>"; };
+		2D7C48C7324CA78F24D88100382117E6 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		2DA21DDD58466EEDAD69104905574AFF /* Emoji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = EmojiKit/Emoji.swift; sourceTree = "<group>"; };
+		2DE91F80FC1C9D3DD189DFC8BCFFA2B6 /* PKHUDTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTitleView.swift; path = PKHUD/PKHUDTitleView.swift; sourceTree = "<group>"; };
+		34DC6C1BAA5129C2B91EDF41149FC30A /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		417AFA4BF611B240570C70CE551D7857 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4ACC9AD415D89CC01782AF9508EF2F46 /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
-		51844D366174A73A2C1E93E4C16B8982 /* AllEmoji.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = AllEmoji.json; sourceTree = "<group>"; };
-		53B85C6C53C8567A7542C2C300DB9534 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
-		5F1DC892088750799D704C12C4E72BE4 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		4C540B4E0DAAC305FD24989A35C55237 /* EmojiKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EmojiKit-dummy.m"; sourceTree = "<group>"; };
+		50A17F72D50E953D18937BE79CC95972 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
+		542BD3F780755EBF85B070B051E01641 /* DictionarySerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionarySerialization.swift; path = EmojiKit/DictionarySerialization.swift; sourceTree = "<group>"; };
+		569A03CBF18A87633AAB959C501EFC8F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		5D16FB37DB4FF64CF26D8BC45B6B2ED5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		5D36257EFFDE1CE6CFE748D970554325 /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		63FE598C01226EBB39972B7DE6AFBEF8 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
 		650E2A19E4C970C850122DFBE1ACAD47 /* Pods-Themoji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Themoji-umbrella.h"; sourceTree = "<group>"; };
-		65CE09BABAFE3D4E5B342FF5C5198845 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
-		7221F10CD3785A3D3721F27C5B3FF7FB /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
-		7254EA2BA3F60C56C9D1E7167FB473E2 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		65A064A4A4DA99AEB4664E26C7110786 /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
+		6B35CEC1A2E37B1F470B77006C1FE8F4 /* EmojiKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EmojiKit.modulemap; sourceTree = "<group>"; };
+		72D1FE22717CBCAF96C40B89FC8B6C5C /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		742F572792F7D2F00E045D9D11EE5B9B /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
 		7E7DCE528CFAD75BEF7FA24C478DBDE2 /* Pods-Themoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Themoji.debug.xcconfig"; sourceTree = "<group>"; };
-		854CD5B720C5452D57AD321481D33C52 /* PKHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.xcconfig; sourceTree = "<group>"; };
-		85E9E3E8480F014407BC2BF1A1415D45 /* PKHUDImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDImageView.swift; path = PKHUD/PKHUDImageView.swift; sourceTree = "<group>"; };
-		A4CE8E0B36DC87E08AF3B852E865E687 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		81A001FA3166ABE879A242F212C180BF /* PKHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.xcconfig; sourceTree = "<group>"; };
+		8CB86A94C40A884301D57C719FB5C542 /* EmojiKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmojiKit-prefix.pch"; sourceTree = "<group>"; };
+		9C44D7A028EC3B3259CD1F57ADE61607 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F38D936934B2ED6FD1CD7BADADE212 /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
 		AA05F6A87AEC4D7E44615063B4B83921 /* PKHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B05819A8E7453000F29FDF90D01077F7 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKHUD.modulemap; sourceTree = "<group>"; };
-		B0F0B1C641937EDC8B494BF785393F89 /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		AB6AEEF3D941A1F829E7F0D992ED73AF /* PKHUDImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDImageView.swift; path = PKHUD/PKHUDImageView.swift; sourceTree = "<group>"; };
+		AF479120A9BFAAE8E5315F77FB3C46E1 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		B174A3A22D64775F9C5B8D26F4C659A7 /* EmojiFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiFetcher.swift; path = EmojiKit/EmojiFetcher.swift; sourceTree = "<group>"; };
+		B29CAC78A552F3375C9F6933338D6CE5 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
 		B4E43D4F0A7F1A672CF0DB189B7A69B3 /* Pods-Themoji-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Themoji-frameworks.sh"; sourceTree = "<group>"; };
 		B962402537B2C267BBE3FCF30B25CFCF /* Pods_Themoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Themoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAAAB5FDF871799664B07599BCDAEC93 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
-		BC680FA5F75380B8613AAF68B6F7C8CE /* PKHUDSubtitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSubtitleView.swift; path = PKHUD/PKHUDSubtitleView.swift; sourceTree = "<group>"; };
-		C5460A703D63D71B989F534F166C0CD2 /* EmojiFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiFetcher.swift; path = EmojiKit/EmojiFetcher.swift; sourceTree = "<group>"; };
+		BE24DB30EB3F7577E808F7B5C7E62385 /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
+		C0E8138C46D0A06AF1B06209163F5299 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
+		C3050C46D4ED566B8BD75F6E3A101DA5 /* PKHUDSubtitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSubtitleView.swift; path = PKHUD/PKHUDSubtitleView.swift; sourceTree = "<group>"; };
+		C6B797304ED0E76B6149F96BDAB75211 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKHUD.modulemap; sourceTree = "<group>"; };
+		CC25256304AA8454CE8508234506A484 /* PKHUDStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDStatusView.swift; path = PKHUD/PKHUDStatusView.swift; sourceTree = "<group>"; };
 		CC2E247A2B63A95D7C45BED1CFBB89C6 /* Pods-Themoji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Themoji-dummy.m"; sourceTree = "<group>"; };
-		D1B9B82340FC23CABF1C041EAF9E069B /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
-		D2B8CF01EAD985FCA7779F0E3CD2F885 /* DictionarySerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionarySerialization.swift; path = EmojiKit/DictionarySerialization.swift; sourceTree = "<group>"; };
+		CD9EDEF36C00E0B444C85E2E38B7A471 /* EmojiKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EmojiKit.xcconfig; sourceTree = "<group>"; };
 		D6A5AE81801F40B3135A612E7B342A05 /* Pods-Themoji-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Themoji-acknowledgements.plist"; sourceTree = "<group>"; };
-		D869D6D8996BFDE1CB36A3179F7ADCBD /* EmojiKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EmojiKit.modulemap; sourceTree = "<group>"; };
-		D8FF61344F01E8794BE4BF9402433481 /* EmojiKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EmojiKit.xcconfig; sourceTree = "<group>"; };
-		DCC4EDB1E996AC702839477815735A1E /* EmojiKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmojiKit-umbrella.h"; sourceTree = "<group>"; };
-		DCDD1531DCAB51093AAE114507939DD0 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
-		DE2ECC2070136D4D46A2D7484E50EF45 /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
-		E15C588A49B785A46B03B655F29A6DD0 /* PKHUDStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDStatusView.swift; path = PKHUD/PKHUDStatusView.swift; sourceTree = "<group>"; };
-		E4459D2160EDE576724D0C032F113F41 /* EmojiKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmojiKit-prefix.pch"; sourceTree = "<group>"; };
-		E6E78C4B6084EB8FE0CEF2A29E1ED14E /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
-		E923CDEA6CA319FFA07B2A5537F14944 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
-		EDB934E3CDE8A5869B9D19AD9713BAFE /* PKHUDTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTitleView.swift; path = PKHUD/PKHUDTitleView.swift; sourceTree = "<group>"; };
-		F1454712CE1EA1DE0BC54B262F11A7EE /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
+		D8EE82E9326687875D746B8A39753553 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		E115CA8A5277415DF3A5ACBC137F577F /* EmojiKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmojiKit-umbrella.h"; sourceTree = "<group>"; };
+		F45F8A9D986CE3CAE5C366022497E196 /* AllEmoji.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = AllEmoji.json; sourceTree = "<group>"; };
 		F779D429378EC449E64ED2DA7AEBE0B3 /* Pods-Themoji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Themoji.modulemap"; sourceTree = "<group>"; };
-		F950EBC8A83388B0F4B5310D9FE499F5 /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
+		FB4B70DB6B37CA596BE2EFDFFFE82C1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2B8793EE55CA4AD73697B5DF4769F8 /* Pods-Themoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Themoji.release.xcconfig"; sourceTree = "<group>"; };
 		FD4993F491AEE1724C3A35814020F85A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,24 +141,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3228B09AFDCABE563C221DE39208DAC7 /* Resources */ = {
+		017E888D2E9E5624002822DFBDBD13CC /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				51844D366174A73A2C1E93E4C16B8982 /* AllEmoji.json */,
+				D21AD8F0339366D79493408438722B27 /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		134AF86E1A1CC2CC39015228CC65CB45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F45F8A9D986CE3CAE5C366022497E196 /* AllEmoji.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		424B90E0BE0ED51D1E0D64D79BDC2366 /* EmojiKit */ = {
+		26AB21A3A589915204E16644F70E31B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D2B8CF01EAD985FCA7779F0E3CD2F885 /* DictionarySerialization.swift */,
-				0C104E8B248A2DB69B276231072AA8D2 /* Emoji.swift */,
-				C5460A703D63D71B989F534F166C0CD2 /* EmojiFetcher.swift */,
-				3228B09AFDCABE563C221DE39208DAC7 /* Resources */,
-				DE7871C21746752E53F7209DB5B0C527 /* Support Files */,
+				34DC6C1BAA5129C2B91EDF41149FC30A /* Images.xcassets */,
 			);
-			path = EmojiKit;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3E32F88D5770DC1AE116C88FA5FBED04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB4B70DB6B37CA596BE2EFDFFFE82C1A /* Info.plist */,
+				C6B797304ED0E76B6149F96BDAB75211 /* PKHUD.modulemap */,
+				81A001FA3166ABE879A242F212C180BF /* PKHUD.xcconfig */,
+				5D36257EFFDE1CE6CFE748D970554325 /* PKHUD-dummy.m */,
+				72D1FE22717CBCAF96C40B89FC8B6C5C /* PKHUD-prefix.pch */,
+				63FE598C01226EBB39972B7DE6AFBEF8 /* PKHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PKHUD";
+			sourceTree = "<group>";
+		};
+		42109FAE9D11C15393B263E53CFB9CFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B35CEC1A2E37B1F470B77006C1FE8F4 /* EmojiKit.modulemap */,
+				CD9EDEF36C00E0B444C85E2E38B7A471 /* EmojiKit.xcconfig */,
+				4C540B4E0DAAC305FD24989A35C55237 /* EmojiKit-dummy.m */,
+				8CB86A94C40A884301D57C719FB5C542 /* EmojiKit-prefix.pch */,
+				E115CA8A5277415DF3A5ACBC137F577F /* EmojiKit-umbrella.h */,
+				9C44D7A028EC3B3259CD1F57ADE61607 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EmojiKit";
 			sourceTree = "<group>";
 		};
 		49A85F61102B890EC1C71DE263B920BD /* Products */ = {
@@ -169,26 +203,43 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		616320AF19E8B56C01BBC2EE7A4D89A5 /* Resources */ = {
+		595583A2A9AA70D34FA1F0B168B03A6A /* EmojiKit */ = {
 			isa = PBXGroup;
 			children = (
-				3B47B4F30899925A3DFAD24753FFA7E1 /* Images.xcassets */,
+				542BD3F780755EBF85B070B051E01641 /* DictionarySerialization.swift */,
+				2DA21DDD58466EEDAD69104905574AFF /* Emoji.swift */,
+				B174A3A22D64775F9C5B8D26F4C659A7 /* EmojiFetcher.swift */,
+				134AF86E1A1CC2CC39015228CC65CB45 /* Resources */,
+				42109FAE9D11C15393B263E53CFB9CFF /* Support Files */,
 			);
-			name = Resources;
+			path = EmojiKit;
 			sourceTree = "<group>";
 		};
-		70FC33F6B3F8A3C63BE03FF26477155B /* Support Files */ = {
+		5C951179E9BE56CFDF060ED81942524D /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				13A704F253F1BC06FA4FB8BCDE3E1474 /* Info.plist */,
-				B05819A8E7453000F29FDF90D01077F7 /* PKHUD.modulemap */,
-				854CD5B720C5452D57AD321481D33C52 /* PKHUD.xcconfig */,
-				B0F0B1C641937EDC8B494BF785393F89 /* PKHUD-dummy.m */,
-				4ACC9AD415D89CC01782AF9508EF2F46 /* PKHUD-prefix.pch */,
-				DCDD1531DCAB51093AAE114507939DD0 /* PKHUD-umbrella.h */,
+				7539A9106A8B1EC348CDC69340E9840A /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/PKHUD";
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		7539A9106A8B1EC348CDC69340E9840A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				569A03CBF18A87633AAB959C501EFC8F /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD037295C9D84FCF38B303613F5A432 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				017E888D2E9E5624002822DFBDBD13CC /* Crashlytics */,
+				595583A2A9AA70D34FA1F0B168B03A6A /* EmojiKit */,
+				5C951179E9BE56CFDF060ED81942524D /* Fabric */,
+				84EEFB9A92990ACD5A2EAFE68C18F719 /* PKHUD */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -196,19 +247,37 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				918F7EB60CC31A56BE87E421E7AFFAC7 /* Pods */,
+				7BD037295C9D84FCF38B303613F5A432 /* Pods */,
 				49A85F61102B890EC1C71DE263B920BD /* Products */,
 				A22F8D6E958FBDF0618F9BE161CF103C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		918F7EB60CC31A56BE87E421E7AFFAC7 /* Pods */ = {
+		84EEFB9A92990ACD5A2EAFE68C18F719 /* PKHUD */ = {
 			isa = PBXGroup;
 			children = (
-				424B90E0BE0ED51D1E0D64D79BDC2366 /* EmojiKit */,
-				FB18CACB99C60D4DCDE96AB2A0A658F7 /* PKHUD */,
+				230BB7BBA456EE074EDF44DBBA849FD7 /* FrameView.swift */,
+				BE24DB30EB3F7577E808F7B5C7E62385 /* PKHUD.h */,
+				10F3EDFD19346DE05A85D33DD3AFAF3F /* PKHUD.swift */,
+				B29CAC78A552F3375C9F6933338D6CE5 /* PKHUDAnimating.swift */,
+				742F572792F7D2F00E045D9D11EE5B9B /* PKHUDAssets.swift */,
+				50A17F72D50E953D18937BE79CC95972 /* PKHUDErrorView.swift */,
+				AB6AEEF3D941A1F829E7F0D992ED73AF /* PKHUDImageView.swift */,
+				C0E8138C46D0A06AF1B06209163F5299 /* PKHUDProgressView.swift */,
+				2D7C48C7324CA78F24D88100382117E6 /* PKHUDSquareBaseView.swift */,
+				CC25256304AA8454CE8508234506A484 /* PKHUDStatusView.swift */,
+				C3050C46D4ED566B8BD75F6E3A101DA5 /* PKHUDSubtitleView.swift */,
+				087E3F2EE3590AEBC7DC40E76EE24BBE /* PKHUDSuccessView.swift */,
+				28505276FEFFFE2D9780BBFE8CFDD7DE /* PKHUDSystemActivityIndicatorView.swift */,
+				A0F38D936934B2ED6FD1CD7BADADE212 /* PKHUDTextView.swift */,
+				2DE91F80FC1C9D3DD189DFC8BCFFA2B6 /* PKHUDTitleView.swift */,
+				D8EE82E9326687875D746B8A39753553 /* PKHUDWideBaseView.swift */,
+				AF479120A9BFAAE8E5315F77FB3C46E1 /* Window.swift */,
+				65A064A4A4DA99AEB4664E26C7110786 /* WindowRootViewController.swift */,
+				26AB21A3A589915204E16644F70E31B7 /* Resources */,
+				3E32F88D5770DC1AE116C88FA5FBED04 /* Support Files */,
 			);
-			name = Pods;
+			path = PKHUD;
 			sourceTree = "<group>";
 		};
 		A22F8D6E958FBDF0618F9BE161CF103C /* Targets Support Files */ = {
@@ -235,18 +304,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DE7871C21746752E53F7209DB5B0C527 /* Support Files */ = {
+		D21AD8F0339366D79493408438722B27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D869D6D8996BFDE1CB36A3179F7ADCBD /* EmojiKit.modulemap */,
-				D8FF61344F01E8794BE4BF9402433481 /* EmojiKit.xcconfig */,
-				3DCC7AB834D1F0652B12EF5D0D44D7A4 /* EmojiKit-dummy.m */,
-				E4459D2160EDE576724D0C032F113F41 /* EmojiKit-prefix.pch */,
-				DCC4EDB1E996AC702839477815735A1E /* EmojiKit-umbrella.h */,
-				417AFA4BF611B240570C70CE551D7857 /* Info.plist */,
+				5D16FB37DB4FF64CF26D8BC45B6B2ED5 /* Crashlytics.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/EmojiKit";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DF170C878DA9EDF88F0402C21E023B0A /* Pods-Themoji */ = {
@@ -265,33 +328,6 @@
 			);
 			name = "Pods-Themoji";
 			path = "Target Support Files/Pods-Themoji";
-			sourceTree = "<group>";
-		};
-		FB18CACB99C60D4DCDE96AB2A0A658F7 /* PKHUD */ = {
-			isa = PBXGroup;
-			children = (
-				D1B9B82340FC23CABF1C041EAF9E069B /* FrameView.swift */,
-				F1454712CE1EA1DE0BC54B262F11A7EE /* PKHUD.h */,
-				1FE95AED992FCA2EED80EB1F10602DB7 /* PKHUD.swift */,
-				53B85C6C53C8567A7542C2C300DB9534 /* PKHUDAnimating.swift */,
-				F950EBC8A83388B0F4B5310D9FE499F5 /* PKHUDAssets.swift */,
-				65CE09BABAFE3D4E5B342FF5C5198845 /* PKHUDErrorView.swift */,
-				85E9E3E8480F014407BC2BF1A1415D45 /* PKHUDImageView.swift */,
-				E923CDEA6CA319FFA07B2A5537F14944 /* PKHUDProgressView.swift */,
-				BAAAB5FDF871799664B07599BCDAEC93 /* PKHUDSquareBaseView.swift */,
-				E15C588A49B785A46B03B655F29A6DD0 /* PKHUDStatusView.swift */,
-				BC680FA5F75380B8613AAF68B6F7C8CE /* PKHUDSubtitleView.swift */,
-				5F1DC892088750799D704C12C4E72BE4 /* PKHUDSuccessView.swift */,
-				7221F10CD3785A3D3721F27C5B3FF7FB /* PKHUDSystemActivityIndicatorView.swift */,
-				E6E78C4B6084EB8FE0CEF2A29E1ED14E /* PKHUDTextView.swift */,
-				EDB934E3CDE8A5869B9D19AD9713BAFE /* PKHUDTitleView.swift */,
-				7254EA2BA3F60C56C9D1E7167FB473E2 /* PKHUDWideBaseView.swift */,
-				A4CE8E0B36DC87E08AF3B852E865E687 /* Window.swift */,
-				DE2ECC2070136D4D46A2D7484E50EF45 /* WindowRootViewController.swift */,
-				616320AF19E8B56C01BBC2EE7A4D89A5 /* Resources */,
-				70FC33F6B3F8A3C63BE03FF26477155B /* Support Files */,
-			);
-			path = PKHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,10 +526,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		484515D78E0730A8849B5E4D38EAC618 /* Debug */ = {
+		284E98842FE1FE0E7130055C3C5B2477 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8FF61344F01E8794BE4BF9402433481 /* EmojiKit.xcconfig */;
+			baseConfigurationReference = 7E7DCE528CFAD75BEF7FA24C478DBDE2 /* Pods-Themoji.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -501,6 +539,71 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				INFOPLIST_FILE = "Target Support Files/Pods-Themoji/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Themoji/Pods-Themoji.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Themoji;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50BA94876D00DE9A469ED502DCD7C515 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A001FA3166ABE879A242F212C180BF /* PKHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PKHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6824D01C268B0F9287111C04DC88465B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD9EDEF36C00E0B444C85E2E38B7A471 /* EmojiKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				GCC_PREFIX_HEADER = "Target Support Files/EmojiKit/EmojiKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EmojiKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -518,10 +621,12 @@
 			};
 			name = Debug;
 		};
-		4A661D5D87BE17895E1B1B79E33EAE47 /* Debug */ = {
+		8791633FED5644B42E0BDF052C192BA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E7DCE528CFAD75BEF7FA24C478DBDE2 /* Pods-Themoji.debug.xcconfig */;
+			baseConfigurationReference = FC2B8793EE55CA4AD73697B5DF4769F8 /* Pods-Themoji.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -529,45 +634,18 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "Target Support Files/Pods-Themoji/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Themoji/Pods-Themoji.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_Themoji;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A1491B95DC855F4D60C76887C58A2AD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 854CD5B720C5452D57AD321481D33C52 /* PKHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PKHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,10 +654,12 @@
 			};
 			name = Release;
 		};
-		A4DCB8C425396E1453E29B1B726E19D0 /* Debug */ = {
+		B7AACD5C184F16F546592DB18553BF64 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 854CD5B720C5452D57AD321481D33C52 /* PKHUD.xcconfig */;
+			baseConfigurationReference = CD9EDEF36C00E0B444C85E2E38B7A471 /* EmojiKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -587,45 +667,15 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/EmojiKit/EmojiKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EmojiKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PKHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B20535C5B675D3EC34F4C805683BACDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC2B8793EE55CA4AD73697B5DF4769F8 /* Pods-Themoji.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Themoji/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Themoji/Pods-Themoji.modulemap";
+				MODULEMAP_FILE = "Target Support Files/EmojiKit/EmojiKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Themoji;
+				PRODUCT_NAME = EmojiKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -673,10 +723,12 @@
 			};
 			name = Debug;
 		};
-		C8EFDA564E0C880FFE01243DBFF001EC /* Release */ = {
+		D06E3F607B2BB1FC9ED54D7D4C56A749 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8FF61344F01E8794BE4BF9402433481 /* EmojiKit.xcconfig */;
+			baseConfigurationReference = 81A001FA3166ABE879A242F212C180BF /* PKHUD.xcconfig */;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -684,21 +736,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EmojiKit/EmojiKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EmojiKit/Info.plist";
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EmojiKit/EmojiKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EmojiKit;
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -740,8 +794,8 @@
 		13EBAA0BE6FFBE8F255298E9A8DA22DE /* Build configuration list for PBXNativeTarget "PKHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4DCB8C425396E1453E29B1B726E19D0 /* Debug */,
-				A1491B95DC855F4D60C76887C58A2AD3 /* Release */,
+				D06E3F607B2BB1FC9ED54D7D4C56A749 /* Debug */,
+				50BA94876D00DE9A469ED502DCD7C515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -758,8 +812,8 @@
 		BF024C3290DE9E216B47F67442B01B33 /* Build configuration list for PBXNativeTarget "EmojiKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				484515D78E0730A8849B5E4D38EAC618 /* Debug */,
-				C8EFDA564E0C880FFE01243DBFF001EC /* Release */,
+				6824D01C268B0F9287111C04DC88465B /* Debug */,
+				B7AACD5C184F16F546592DB18553BF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -767,8 +821,8 @@
 		F5F0214FC65EF44FF55B34C5F2DDBEE3 /* Build configuration list for PBXNativeTarget "Pods-Themoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4A661D5D87BE17895E1B1B79E33EAE47 /* Debug */,
-				B20535C5B675D3EC34F4C805683BACDD /* Release */,
+				284E98842FE1FE0E7130055C3C5B2477 /* Debug */,
+				8791633FED5644B42E0BDF052C192BA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
