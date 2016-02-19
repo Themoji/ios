@@ -502,6 +502,7 @@
 				PROVISIONING_PROFILE = "$(sigh_me.themoji.app.beta_appstore)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -525,6 +526,7 @@
 				PRODUCT_NAME = Themoji;
 				PROVISIONING_PROFILE = "$(sigh_me.themoji.app.beta_appstore)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
