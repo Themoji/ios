@@ -14,8 +14,9 @@ platform :ios do
       })
     end
 
-    match(type: "development", readonly: options[:readonly])
-    match(type: "appstore", readonly: options[:readonly])
+    match(type: "development", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
+    match(type: "appstore", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
+    match(type: "adhoc", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
   end
 
   desc "Runs all the tests"
@@ -27,11 +28,19 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     increment_build_number
+    build_app(env: "appstore")
     commit_version_bump(force: true, xcodeproj: "Themoji.xcodeproj")
-
-    match(type: "appstore")
-    gym(scheme: "Themoji")
-
     pilot
+  end
+
+  lane :appstore do
+    ensure_git_status_clean
+    build_app(env: "appstore")
+    deliver
+  end
+
+  private_lane :build_app do |options|
+    match(type: options[:env], readonly: true)
+    gym(scheme: "Themoji", use_legacy_build_api: true)
   end
 end
