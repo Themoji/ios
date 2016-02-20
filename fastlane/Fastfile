@@ -43,8 +43,10 @@ platform :ios do
   lane :appstore do
     match(type: "appstore", force: true)
     ensure_git_status_clean
+    snapshot
     build_app(env: "appstore")
     deliver(force: true)
+    notification(title: "Successfully uploaded metadata and build to iTunes Connect")
   end
 
   private_lane :build_app do |options|
