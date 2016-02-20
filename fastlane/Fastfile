@@ -44,7 +44,7 @@ platform :ios do
     match(type: "appstore", force: true)
     ensure_git_status_clean
     build_app(env: "appstore")
-    deliver
+    deliver(force: true)
   end
 
   private_lane :build_app do |options|

@@ -1,1 +1,3 @@
 app_icon "fastlane/metadata/Themoji.png"
+price_tier 0
+automatic_release true
