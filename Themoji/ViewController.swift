@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
-    let emojiLabelHeight: CGFloat = 400 // this is NOT the font size
+    var emojiLabelHeight: CGFloat = 0.0 // this is NOT the font size
     
     let emojiHistoryKey = "emojiHistory"
     
@@ -43,9 +43,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
-        self.emojiHeightConstraint.constant = emojiLabelHeight
 
         self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(384)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        emojiLabelHeight = self.view.bounds.height / 2.0
+        self.emojiHeightConstraint.constant = emojiLabelHeight
     }
     
     func keyboardWillShow(notification: NSNotification) {
