@@ -10,7 +10,7 @@ platform :ios do
   lane :bootstrap do |options|
     unless options[:readonly]
       register_devices(devices: {
-        "Felix Krause's iPhone 6s": "116307ad03065412b3084f4dc8498922e0214e73"
+        "Felix Krause's iPhone 6s" => "116307ad03065412b3084f4dc8498922e0214e73"
       })
     end
 
