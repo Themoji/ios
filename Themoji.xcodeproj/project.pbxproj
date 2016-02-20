@@ -497,9 +497,9 @@
 				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.release;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "9d8c4a19-da7c-4574-b9ff-4744bcae5de9";
+				PROVISIONING_PROFILE = "685d4cea-827f-4b1a-bfde-3a2bbd50cb65";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -522,9 +522,9 @@
 				INFOPLIST_FILE = Themoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.release;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "9d8c4a19-da7c-4574-b9ff-4744bcae5de9";
+				PROVISIONING_PROFILE = "685d4cea-827f-4b1a-bfde-3a2bbd50cb65";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
