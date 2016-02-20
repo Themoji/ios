@@ -28,9 +28,9 @@ class ThemojiUITests: XCTestCase {
         snapshot("02Category")
         app.tables.staticTexts.elementBoundByIndex(0).tap()
         
-        let searchEmojiTextField = app.textFields["Search Emoji"]
-        searchEmojiTextField.tap()
-        searchEmojiTextField.typeText("ai")
-        snapshot("04Filter")
+        
+        app.buttons["Search"].tap()
+        app.textFields["Search Emoji"].typeText("air")
+        snapshot("03Search")
     }
 }
