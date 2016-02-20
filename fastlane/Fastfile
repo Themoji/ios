@@ -14,9 +14,16 @@ platform :ios do
       })
     end
 
-    match(type: "development", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
-    match(type: "appstore", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
-    match(type: "adhoc", readonly: options[:readonly], force_for_new_devices: !options[:readonly])
+    match(type: "development", 
+      readonly: options[:readonly], 
+      force_for_new_devices: !options[:readonly])
+    match(type: "adhoc", 
+      readonly: options[:readonly], 
+      force_for_new_devices: !options[:readonly])
+    match(type: "appstore", 
+      app_identifier: "me.themoji.app.release",
+      readonly: options[:readonly], 
+      force_for_new_devices: !options[:readonly])
   end
 
   desc "Runs all the tests"
@@ -34,6 +41,7 @@ platform :ios do
   end
 
   lane :appstore do
+    match(type: "appstore", force: true)
     ensure_git_status_clean
     build_app(env: "appstore")
     deliver

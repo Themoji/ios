@@ -1,5 +1,6 @@
-app_identifier "me.themoji.app.beta" # The bundle identifier of your app
-apple_id "apple@krausefx.com" # Your Apple email address
+apple_id "apple@krausefx.com"
+app_identifier "me.themoji.app.beta"
 
-# you can even provide different app identifiers, Apple IDs and team names per lane:
-# More information: https://github.com/fastlane/fastlane/blob/master/docs/Appfile.md
+for_lane :appstore do
+  app_identifier "me.themoji.app.release"
+end
