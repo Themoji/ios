@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍕" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="150" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-zn-XJQ">
-                                <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <rect key="frame" x="20" y="20" width="460" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="mHA-O8-8m5"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-5P-DhF">
-                                <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <rect key="frame" x="20" y="20" width="460" height="300"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <action selector="didTapEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbn-sr-WDr"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-8m-amg">
-                                <rect key="frame" x="2" y="466" width="596" height="94"/>
+                                <rect key="frame" x="2" y="466" width="496" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="FiR-hG-kv7"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </tableView>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Emoji" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-Tw-RHw">
-                                <rect key="frame" x="20" y="565" width="560" height="30"/>
+                                <rect key="frame" x="20" y="565" width="460" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Kds-Xe-P5g"/>
                                     <constraint firstAttribute="height" constant="30" id="fmR-LE-BTZ"/>
@@ -66,10 +66,13 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3iE-A2-5xX">
-                                <rect key="frame" x="20" y="385" width="560" height="180"/>
+                                <rect key="frame" x="50" y="385" width="400" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="Ahy-kV-N5N"/>
                                     <constraint firstAttribute="height" constant="180" id="clV-CM-aOC"/>
+                                    <constraint firstAttribute="width" constant="560" id="qHH-fu-SiG"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="s2V-vx-bLo"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AmX-sB-ryx">
                                     <size key="itemSize" width="130" height="80"/>
@@ -78,13 +81,19 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ahy-kV-N5N"/>
+                                        <exclude reference="qHH-fu-SiG"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="yBj-C7-DxT"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0y1-gB-CNf"/>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Aa-cJ-RHK">
-                                <rect key="frame" x="20" y="565" width="280" height="30"/>
+                                <rect key="frame" x="20" y="565" width="230" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="63Q-Ww-yAh"/>
                                     <constraint firstAttribute="height" constant="30" id="e86-ik-Dq8"/>
@@ -103,7 +112,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-YW-HfR" userLabel="History">
-                                <rect key="frame" x="300" y="565" width="280" height="30"/>
+                                <rect key="frame" x="250" y="565" width="230" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5tz-L9-fvL"/>
                                     <constraint firstAttribute="height" constant="30" id="Y9o-xr-yYQ"/>
@@ -131,6 +140,7 @@
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="leading" secondItem="1ag-zn-XJQ" secondAttribute="leading" id="6mK-wF-Gzv"/>
                             <constraint firstItem="1Aa-cJ-RHK" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="7Gb-IP-JpP"/>
                             <constraint firstItem="3iE-A2-5xX" firstAttribute="trailing" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="7ot-v6-ehq"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3iE-A2-5xX" secondAttribute="trailing" id="Axd-NO-sjL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yJi-Tw-RHw" secondAttribute="trailing" id="Ba7-ky-eVI"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="top" secondItem="1ag-zn-XJQ" secondAttribute="bottom" constant="-5" id="BwD-p7-peo"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DaO-yv-I9M"/>
@@ -150,6 +160,7 @@
                             <constraint firstItem="6WK-YW-HfR" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="cYj-mt-cVV"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dYO-X3-9YM"/>
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="width" secondItem="1ag-zn-XJQ" secondAttribute="width" id="f5F-jE-b3e"/>
+                            <constraint firstItem="3iE-A2-5xX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0d-Lw-8hK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6WK-YW-HfR" secondAttribute="trailing" constant="3" id="h96-Wd-Xa5"/>
                             <constraint firstItem="jL4-8m-amg" firstAttribute="leading" secondItem="yJi-Tw-RHw" secondAttribute="leading" constant="-18" id="hQk-mA-ZY0"/>
                             <constraint firstItem="yJi-Tw-RHw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heb-bB-FKn"/>
@@ -159,12 +170,15 @@
                             <constraint firstItem="ygq-5P-DhF" firstAttribute="height" secondItem="1ag-zn-XJQ" secondAttribute="height" id="pKz-YR-Abb"/>
                             <constraint firstItem="1Aa-cJ-RHK" firstAttribute="bottom" secondItem="yJi-Tw-RHw" secondAttribute="bottom" id="qED-Iz-8uC"/>
                             <constraint firstItem="1ag-zn-XJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tRc-Pg-zII"/>
+                            <constraint firstAttribute="leadingMargin" relation="greaterThanOrEqual" secondItem="3iE-A2-5xX" secondAttribute="leading" priority="10" id="yhH-wY-oCc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="1zM-zG-X9x"/>
                                 <exclude reference="PKo-B2-7jh"/>
                                 <exclude reference="f5F-jE-b3e"/>
+                                <exclude reference="7ot-v6-ehq"/>
+                                <exclude reference="lBG-z4-PK0"/>
                                 <exclude reference="BwD-p7-peo"/>
                                 <exclude reference="11v-I2-wBL"/>
                                 <exclude reference="qED-Iz-8uC"/>
@@ -178,6 +192,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="600"/>
                     <connections>
                         <outlet property="autocompletionItemsHeight" destination="FiR-hG-kv7" id="8FO-Tr-4Yo"/>
                         <outlet property="autocompletionTableView" destination="jL4-8m-amg" id="Qy2-Fc-SBe"/>
