@@ -15,7 +15,6 @@
 		CA659ADD1C4DCB2700A4C7EF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD41C4DCB2700A4C7EF /* Category.swift */; };
 		CA659ADE1C4DCB2700A4C7EF /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD51C4DCB2700A4C7EF /* CategoryButton.swift */; };
 		CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD61C4DCB2700A4C7EF /* CategoryButton.xib */; };
-		CA659AE01C4DCB2700A4C7EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA659AD71C4DCB2700A4C7EF /* Info.plist */; };
 		CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD81C4DCB2700A4C7EF /* ViewController.swift */; };
 		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
 		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
@@ -266,7 +265,6 @@
 				CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */,
 				CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */,
 				CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */,
-				CA659AE01C4DCB2700A4C7EF /* Info.plist in Resources */,
 				CA659ADB1C4DCB2700A4C7EF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.release;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "685d4cea-827f-4b1a-bfde-3a2bbd50cb65";
+				PROVISIONING_PROFILE = "dd584668-3b5b-4078-bc70-a64c74241520";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,7 +522,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.release;
 				PRODUCT_NAME = Themoji;
-				PROVISIONING_PROFILE = "685d4cea-827f-4b1a-bfde-3a2bbd50cb65";
+				PROVISIONING_PROFILE = "dd584668-3b5b-4078-bc70-a64c74241520";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
