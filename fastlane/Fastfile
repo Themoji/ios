@@ -46,7 +46,7 @@ platform :ios do
     snapshot
     build_app(env: "appstore")
     deliver(force: true)
-    notification(title: "Successfully uploaded metadata and build to iTunes Connect")
+    notification(title: "Successfully uploaded metadata and build to iTunes Connect", message: "🎉")
   end
 
   private_lane :build_app do |options|
