@@ -38,14 +38,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
 
         self.emojiLabel.font = FontRendering.highResolutionEmojiUIFontSize(384)
+        if let lastEmoji = history().first {
+            self.setEmoji(lastEmoji)
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.didTriggerEmoji(_:)), name: "ShowEmoji", object: nil)
     }
+    
+    func didTriggerEmoji(noti: NSNotification) {
+        let searchString = (noti.object as! String).lowercaseString
+        
+        emojiFetcher.cancelFetches()
+        emojiFetcher.query(searchString) { emojiResults in
+            let emoji = emojiResults.last
+            self.setEmoji((emoji?.character)!)
+        }
+    }
+
+    func setEmoji(emoji: String) {
+        self.emojiLabel.text = emoji
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -95,13 +115,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         isFullScreen = true
     }
-    @IBAction func didTapHistory(sender: AnyObject) {
+    
+    
+    func history() -> [String] {
         if let recent = NSUserDefaults.standardUserDefaults().arrayForKey(emojiHistoryKey) as? [String] {
-            prefillAutoCompletion(recent.joinWithSeparator(""))
+            return recent
         }
         else {
-            
+            return []
         }
+    }
+    
+    @IBAction func didTapHistory(sender: AnyObject) {
+        prefillAutoCompletion(history().joinWithSeparator(""))
     }
     
     @IBAction func didTapSearch(sender: AnyObject) {
