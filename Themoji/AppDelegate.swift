@@ -24,5 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        let url = url.standardizedURL
+        let emoji = url?.absoluteString.componentsSeparatedByString("/").last
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("ShowEmoji", object: emoji)
+        
+        return true
+    }
 }
 
