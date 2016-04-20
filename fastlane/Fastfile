@@ -8,9 +8,9 @@ platform :ios do
   lane :device_grid do
     import_from_git(url: "https://github.com/fastlane/fastlane",
                     branch: "pr-preview",
-                    path: "fastlane/lib/fastlane/actions/device_grid/DeviceGridFastfile")
+                    path: "fastlane/lib/fastlane/actions/device_grid/AppetizeFastfile")
 
-    generate_device_grid(
+    build_and_upload_appetize(
       xcodebuild: {
         workspace: "Themoji.xcworkspace",
         scheme: "Themoji"
