@@ -6,11 +6,7 @@ platform :ios do
   desc "Generate and upload an .app to appetize.io"
   desc "This is being called from danger"
   lane :device_grid do
-    import_from_git(url: "https://github.com/fastlane/fastlane",
-                    branch: "pr-preview",
-                    path: "fastlane/lib/fastlane/actions/device_grid/DeviceGridFastfile")
-
-    generate_device_grid(
+    build_and_upload_to_appetize(
       xcodebuild: {
         workspace: "Themoji.xcworkspace",
         scheme: "Themoji"
