@@ -3,17 +3,6 @@ fastlane_version "1.50.0"
 default_platform :ios
 
 platform :ios do
-  desc "Generate and upload an .app to appetize.io"
-  desc "This is being called from danger"
-  lane :device_grid do
-    build_and_upload_to_appetize(
-      xcodebuild: {
-        workspace: "Themoji.xcworkspace",
-        scheme: "Themoji"
-      }
-    )
-  end
-
   desc "Set up a new Mac"
   desc "To run this in readonly mode without user credentials use"
   desc "fastlane bootstrap readonly:true"
