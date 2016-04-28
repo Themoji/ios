@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: https://github.com/fastlane/fastlane
-  revision: 8813c2b6db8946c9eeb79e2864b4cd265ac7fc24
+  revision: 6c47c652e3bb5963d55b95e682e5ef4c1e295193
   branch: pr-preview
   specs:
     cert (1.4.0)
