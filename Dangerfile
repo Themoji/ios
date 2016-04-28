@@ -2,8 +2,8 @@ puts "Running fastlane to generate and upload an ipa file..."
 
 options = {
   xcodebuild: {
-      scheme: "Themoji"
-    }
+    scheme: "Themoji"
+  }
 }
 
 require 'fastlane'
