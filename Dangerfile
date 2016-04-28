@@ -9,8 +9,7 @@ options = {
 require 'fastlane'
 result = Fastlane::OneOff.run(action: "build_and_upload_to_appetize",
                           parameters: options)
-
-import "https://raw.githubusercontent.com/fastlane/fastlane/pr-preview/fastlane/lib/fastlane/actions/device_grid/device_grid.rb"
+require 'fastlane/actions/device_grid/device_grid'
 
 device_grid(
   public_key: result,
