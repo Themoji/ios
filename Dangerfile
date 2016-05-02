@@ -1,8 +1,18 @@
 puts "Running fastlane to generate and upload an ipa file..."
-puts `fastlane device_grid`
 
-import "https://raw.githubusercontent.com/fastlane/fastlane/pr-preview/fastlane/lib/fastlane/actions/device_grid/device_grid.rb"
+options = {
+  xcodebuild: {
+    scheme: "Themoji"
+  }
+}
+
+require 'fastlane'
+result = Fastlane::OneOff.run(action: "build_and_upload_to_appetize",
+                          parameters: options)
+require 'fastlane/actions/device_grid/device_grid'
+
 device_grid(
-  languages: ["en-US", "de-DE"],
+  public_key: result,
+  languages: ["en", "de"],
   devices: ["iphone5s", "iphone6splus", "ipadair"]
 )
