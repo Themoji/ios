@@ -3,6 +3,7 @@
 To compile the project you first have to run
 
 ```
+bundle install
 rake
 ```
 
