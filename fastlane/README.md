@@ -5,17 +5,7 @@ fastlane documentation
 sudo gem install fastlane
 ```
 # Available Actions
-
-----
-
 ## iOS
-### ios device_grid
-```
-fastlane ios device_grid
-```
-Generate and upload an .app to appetize.io
-
-This is being called from danger
 ### ios bootstrap
 ```
 fastlane ios bootstrap
