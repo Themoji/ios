@@ -14,6 +14,6 @@ options = {
 #   public_key: result,
 #   languages: ["en", "de"],
 #   devices: ["iphone5s", "iphone6splus", "ipadair"]
-)
+# )
 
 message "local dangerfile"
