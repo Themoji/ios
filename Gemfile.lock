@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/danger/danger
-  revision: 387a80b37c08e65371fa4d7549f0e0132bc991d0
+  revision: d08c0c2a4b313e27d61c86661a47490d5e153f0e
+  branch: danger-org
   specs:
     danger (0.8.5)
       claide (~> 1.0)
@@ -21,7 +22,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.6)
+    activesupport (4.2.7)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -68,6 +69,7 @@ GEM
       nap (>= 0.8, < 2.0)
       netrc (= 0.7.8)
     cocoapods-try (1.1.0)
+    coderay (1.1.1)
     colored (1.2)
     commander (4.3.5)
       highline (~> 1.7.2)
@@ -208,6 +210,7 @@ GEM
       sigh (>= 1.2.2, < 2.0.0)
       spaceship (>= 0.24.0, < 1.0.0)
     memoist (0.14.0)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -238,6 +241,10 @@ GEM
     produce (1.1.2)
       fastlane_core (>= 0.30.0, < 1.0.0)
       spaceship (>= 0.16.0, < 1.0.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     redcarpet (3.3.4)
     representable (2.3.0)
       uber (~> 0.0.7)
@@ -266,6 +273,7 @@ GEM
       jwt (~> 1.5)
       multi_json (~> 1.10)
     slack-notifier (1.5.1)
+    slop (3.6.0)
     snapshot (1.12.3)
       fastimage (~> 1.6.3)
       fastlane_core (>= 0.36.1, < 1.0.0)
@@ -317,6 +325,7 @@ DEPENDENCIES
   danger-device_grid
   fastlane
   fastlane-plugin-emoji_fetcher!
+  pry
 
 BUNDLED WITH
    1.12.5
