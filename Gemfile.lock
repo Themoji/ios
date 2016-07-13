@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/danger/danger
-  revision: d08c0c2a4b313e27d61c86661a47490d5e153f0e
+  revision: b16f3d9b51d5656bb51c4dadd0c45d33e970f3c7
   branch: danger-org
   specs:
     danger (0.8.5)
