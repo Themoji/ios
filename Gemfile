@@ -4,6 +4,7 @@ gem "fastlane"
 gem "cocoapods"
 gem "danger", git: "https://github.com/danger/danger"
 gem "danger-device_grid"
+gem "danger-screen_grid", git: "https://github.com/fastlane/fastlane", branch: "screen-grid"
 gem "bundler"
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
