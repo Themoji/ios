@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-gem "fastlane"
+gem "fastlane", git: "https://github.com/fastlane/fastlane", branch: "screen-grid"
 gem "cocoapods"
 gem "danger", git: "https://github.com/danger/danger"
-gem "danger-device_grid"
+gem "danger-device_grid", git: "https://github.com/fastlane/fastlane", branch: "screen-grid"
 gem "danger-screen_grid", git: "https://github.com/fastlane/fastlane", branch: "screen-grid"
 gem "bundler"
 
