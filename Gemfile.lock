@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/fastlane/fastlane
-  revision: a99c99b246910435808a534b449b8a60188cb223
+  revision: 10001d8ad4e492c7bf4d5de95c39d4a100a3e1af
   branch: screen-grid
   specs:
     cert (1.4.1)
