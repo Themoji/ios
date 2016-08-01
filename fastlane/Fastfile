@@ -29,7 +29,7 @@ platform :ios do
   lane :test do
     scan(scheme: "ThemojiUITests", 
          output_types: "",
-         derived_data_path: File.join(ENV["CIRCLE_TEST_REPORTS"] || "/tmp/fastlane_trainer/", "rspec")
+         derived_data_path: File.join(ENV["CIRCLE_TEST_REPORTS"] || "/tmp/fastlane_trainer/", "rspec"))
     trainer
   end
 
