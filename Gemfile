@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "fastlane"
+gem "fastlane", git: "https://github.com/fastlane/fastlane", branch: "scan-derived-data"
 gem "cocoapods"
 gem "danger", git: "https://github.com/danger/danger"
 gem "danger-device_grid"
