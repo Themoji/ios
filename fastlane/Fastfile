@@ -27,10 +27,7 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan(scheme: "ThemojiUITests", 
-         output_types: "",
-         derived_data_path: "/tmp/something/random")
-    trainer
+    scan
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
