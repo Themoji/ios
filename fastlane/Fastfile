@@ -28,7 +28,8 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
     scan(scheme: "ThemojiUITests", 
-         output_types: "")
+         output_types: "",
+         derived_data_path: "/tmp")
     junit_paths = trainer
 
     # Now we have one or more JUnit reports, let's copy them to
