@@ -1,3 +1,10 @@
+puts `bundle exec fastlane test`
+Dir[File.join(ENV["CIRCLE_TEST_REPORTS"], "**/*.xml")].each do |path|
+  puts "Parsing JUnit file at path '#{path}'"
+  junit.parse(path)
+end
+junit.report
+
 puts "Running fastlane to generate and upload an ipa file..."
 
 options = {
