@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/fastlane/fastlane
-  revision: 0d3558bd6e7b498bed1f6fee4c944c3027467eef
+  revision: eb00d272ab1e7a2be3f42063f1c776b80c527c5d
   branch: scan-derived-data
   specs:
     cert (1.4.1)
