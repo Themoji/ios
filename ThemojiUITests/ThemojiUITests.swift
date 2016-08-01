@@ -20,17 +20,21 @@ class ThemojiUITests: XCTestCase {
         app.launch()
     }
     
+    func testIsBroken() {
+        XCTAssert(1 == 0)
+    }
+    
     func testExample() {
-        let app = XCUIApplication()
+//        let app = XCUIApplication()
         snapshot("01Landing")
 
-        app.collectionViews.staticTexts.elementBoundByIndex(0).tap()
-        snapshot("02Category")
-        app.tables.staticTexts.elementBoundByIndex(0).tap()
-        
-        
-        app.buttons["Search"].tap()
-        app.textFields["Search Emoji"].typeText("air")
-        snapshot("03Search")
+//        app.collectionViews.staticTexts.elementBoundByIndex(0).tap()
+//        snapshot("02Category")
+//        app.tables.staticTexts.elementBoundByIndex(0).tap()
+//        
+//        
+//        app.buttons["Search"].tap()
+//        app.textFields["Search Emoji"].typeText("air")
+//        snapshot("03Search")
     }
 }
