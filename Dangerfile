@@ -1,3 +1,13 @@
+puts "Running fastlane"
+
+require 'snapshot'
+options = {}
+Snapshot.config = FastlaneCore::Configuration.create(Snapshot::Options.available_options, options)
+Snapshot::Runner.new.work
+
+puts 'running screen_grid'
+screen_grid.run
+
 puts "Running fastlane to generate and upload an ipa file..."
 
 options = {
