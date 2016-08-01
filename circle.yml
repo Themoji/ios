@@ -10,3 +10,4 @@ dependencies:
 test:
   override:
     - bundle exec danger
+    - bundle exec fastlane test
