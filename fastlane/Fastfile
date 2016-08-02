@@ -30,10 +30,12 @@ platform :ios do
     begin
       scan(scheme: "ThemojiUITests", 
            output_types: "")
-    rescue
+    rescue => ex
+      failure = ex
     end
 
-    junit_paths = trainer(output_directory: (ENV["CIRCLE_TEST_REPORTS"] || "/tmp"))
+    trainer(output_directory: (ENV["CIRCLE_TEST_REPORTS"] || "/tmp"))
+    raise failure
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
