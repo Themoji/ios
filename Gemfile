@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-gem "fastlane", path: "/Users/fkrause/Developer/fastlane/fastlane"
-gem "scan", path: "/Users/fkrause/Developer/fastlane/scan"
+gem "fastlane", git: "https://github.com/fastlane/fastlane", branch: "scan-derived-data"
 gem "cocoapods"
 gem "bundler"
 
