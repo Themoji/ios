@@ -20,6 +20,10 @@ class ThemojiUITests: XCTestCase {
         app.launch()
     }
     
+    func testIsBroken() {
+        XCTAssert(1 == 1)
+    }
+    
     func testExample() {
         let app = XCUIApplication()
         snapshot("01Landing")

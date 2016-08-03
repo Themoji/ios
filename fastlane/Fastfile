@@ -27,7 +27,15 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    begin
+      scan(scheme: "ThemojiUITests", 
+           output_types: "")
+    rescue => ex
+      failure = ex
+    end
+
+    trainer(output_directory: (ENV["CIRCLE_TEST_REPORTS"] || "/tmp"))
+    raise failure if failure
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
