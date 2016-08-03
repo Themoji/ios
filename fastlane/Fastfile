@@ -35,7 +35,7 @@ platform :ios do
     end
 
     trainer(output_directory: (ENV["CIRCLE_TEST_REPORTS"] || "/tmp"))
-    raise failure
+    raise failure if failure
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
