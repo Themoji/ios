@@ -3,7 +3,8 @@ machine:
     version: "7.3"
 dependencies:
   override:
-    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without development
+    # - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without development
+    - bundle install
     - rake
   cache_directories:
     - vendor/bundle
