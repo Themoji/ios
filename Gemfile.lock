@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/KrauseFx/danger-junit
-  revision: a8f919085b841386eae03a0e86278a9984090342
-  specs:
-    danger-junit (0.6.3)
-      danger (~> 2.0)
-      ox (~> 2.0)
-
-GIT
   remote: https://github.com/danger/danger
   revision: 1eee9b789427c096d68e07d224f59145b085ae9f
   specs:
@@ -142,6 +134,14 @@ GIT
     trainer (0.2.0)
       fastlane_core (>= 0.50.0, < 1.0.0)
       plist (>= 3.1.0, < 4.0.0)
+
+GIT
+  remote: https://github.com/orta/danger-junit
+  revision: 146541ed6f725d8f557dd1391c3397869d2fb704
+  specs:
+    danger-junit (0.7.0)
+      danger (~> 2.0)
+      ox (~> 2.0)
 
 PATH
   remote: ./fastlane-plugin-emoji_fetcher
