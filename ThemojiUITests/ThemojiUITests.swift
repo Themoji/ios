@@ -21,7 +21,7 @@ class ThemojiUITests: XCTestCase {
     }
     
     func testIsBroken() {
-        XCTAssert(1 == 1)
+        XCTAssert(1 == 2)
     }
     
     func testExample() {
