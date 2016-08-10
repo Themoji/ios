@@ -1,4 +1,4 @@
-puts `bundle exec fastlane test`
+puts `fastlane test`
 Dir[File.join(ENV["CIRCLE_TEST_REPORTS"], "**/*.xml")].each do |path|
   puts "Parsing JUnit file at path '#{path}'"
   junit.parse(path)
