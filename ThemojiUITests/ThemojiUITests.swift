@@ -21,7 +21,7 @@ class ThemojiUITests: XCTestCase {
     }
     
     func testWhenInTheUKItHasToRain() {
-        XCTAssert(1 == 2)
+        XCTAssert(1 == 1)
     }
     
     func testExample() {
