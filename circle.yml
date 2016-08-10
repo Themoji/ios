@@ -9,5 +9,4 @@ dependencies:
     - vendor/bundle
 test:
   override:
-    - bundle exec fastlane test
     - bundle exec danger

@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/KrauseFx/danger-junit
+  revision: a8f919085b841386eae03a0e86278a9984090342
+  specs:
+    danger-junit (0.6.3)
+      danger (~> 2.0)
+      ox (~> 2.0)
+
+GIT
   remote: https://github.com/danger/danger
   revision: 1eee9b789427c096d68e07d224f59145b085ae9f
   specs:
@@ -264,6 +272,7 @@ GEM
       sawyer (~> 0.7.0, >= 0.5.3)
     open4 (1.3.4)
     os (0.9.6)
+    ox (2.4.4)
     plist (3.1.0)
     produce (1.1.4)
       fastlane_core (>= 0.30.0, < 1.0.0)
@@ -338,13 +347,28 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  cert!
   cocoapods
   danger!
   danger-device_grid
+  danger-junit!
+  deliver!
   fastlane!
   fastlane-plugin-emoji_fetcher!
   fastlane-plugin-trainer!
+  frameit!
+  gym!
+  match!
+  pem!
+  pilot!
+  produce!
   pry
+  scan!
+  screengrab!
+  sigh!
+  snapshot!
+  spaceship!
+  supply!
 
 BUNDLED WITH
    1.12.5

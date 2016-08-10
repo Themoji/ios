@@ -20,7 +20,7 @@ class ThemojiUITests: XCTestCase {
         app.launch()
     }
     
-    func testIsBroken() {
+    func testWhenInTheUKItHasToRain() {
         XCTAssert(1 == 1)
     }
     
