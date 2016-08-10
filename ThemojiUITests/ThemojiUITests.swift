@@ -20,7 +20,7 @@ class ThemojiUITests: XCTestCase {
         app.launch()
     }
     
-    func testIsBroken() {
+    func itHasToRainInTheUK() {
         XCTAssert(1 == 2)
     }
     
