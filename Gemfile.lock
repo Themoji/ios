@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/danger/danger
-  revision: a67bc71710d952ecc6d32d6f44e56078745f7e8a
+  revision: 1eee9b789427c096d68e07d224f59145b085ae9f
   specs:
-    danger (2.1.1)
+    danger (2.1.2)
       claide (~> 1.0)
       claide-plugins (> 0.9.0)
       colored (~> 1.2)
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/fastlane/fastlane
-  revision: fbf4ba0c6d2f54c5697638b700334b4be977fd08
+  revision: 282916880d5a9485fa0d54c1c28d77e58e19aa53
   branch: scan-derived-data
   specs:
     cert (1.4.1)
@@ -29,12 +29,6 @@ GIT
       security
     danger-device_grid (0.1.2)
       fastlane (>= 1.94.0, < 2.0.0)
-    deliver (1.13.1)
-      credentials_manager (>= 0.16.0, < 1.0.0)
-      fastimage (~> 1.6)
-      fastlane_core (>= 0.46.2, < 1.0.0)
-      plist (~> 3.1.0)
-      spaceship (>= 0.26.2, < 1.0.0)
     fastlane (1.99.0)
       activesupport (< 5)
       addressable (~> 2.3)
@@ -65,19 +59,6 @@ GIT
       xcode-install (~> 2.0.0)
       xcodeproj (>= 0.20, < 2.0.0)
       xcpretty (>= 0.2.1)
-    fastlane_core (0.48.3)
-      babosa
-      colored
-      commander (= 4.3.5)
-      credentials_manager (>= 0.16.0, < 1.0.0)
-      excon (~> 0.45.0)
-      gh_inspector (>= 1.0.1, < 2.0.0)
-      highline (>= 1.7.2)
-      json
-      multi_json
-      plist (~> 3.1)
-      rubyzip (~> 1.1.6)
-      terminal-table (~> 1.4.5)
     frameit (2.7.0)
       deliver (> 0.3)
       fastimage (~> 1.6.3)
@@ -89,13 +70,6 @@ GIT
       rubyzip (>= 1.1.7)
       terminal-table
       xcpretty (>= 0.2.1)
-    match (0.6.1)
-      cert (>= 1.2.8, < 2.0.0)
-      credentials_manager (>= 0.13.0, < 1.0.0)
-      fastlane_core (>= 0.39.0, < 1.0.0)
-      security
-      sigh (>= 1.2.2, < 2.0.0)
-      spaceship (>= 0.24.0, < 1.0.0)
     pem (1.3.2)
       fastlane_core (>= 0.43.1, < 1.0.0)
       spaceship (>= 0.26.2, < 1.0.0)
@@ -104,35 +78,10 @@ GIT
       fastlane_core (>= 0.46.2, < 1.0.0)
       spaceship (>= 0.29.0, < 1.0.0)
       terminal-table (~> 1.4.5)
-    produce (1.1.3)
-      fastlane_core (>= 0.30.0, < 1.0.0)
-      spaceship (>= 0.29.1, < 1.0.0)
-    scan (0.10.0)
-      fastlane_core (>= 0.43.3, < 1.0.0)
-      slack-notifier (~> 1.3)
-      terminal-table
-      xcpretty (>= 0.2.1)
-      xcpretty-travis-formatter (>= 0.0.3)
-    screengrab (0.3.2)
-      fastlane_core (>= 0.38.0, < 1.0.0)
     sigh (1.9.0)
       fastlane_core (>= 0.36.1, < 1.0.0)
       plist (~> 3.1)
       spaceship (>= 0.29.1, < 1.0.0)
-    snapshot (1.13.0)
-      fastimage (~> 1.6.3)
-      fastlane_core (>= 0.43.3, < 1.0.0)
-      plist (~> 3.1.0)
-      xcpretty (>= 0.2.1)
-    spaceship (0.29.1)
-      colored
-      credentials_manager (>= 0.9.0)
-      faraday (~> 0.9)
-      faraday-cookie_jar (~> 0.0.6)
-      faraday_middleware (~> 0.9)
-      fastimage (~> 1.6)
-      multi_xml (~> 0.5)
-      plist (~> 3.1)
     supply (0.7.0)
       credentials_manager (>= 0.15.0)
       fastlane_core (>= 0.43.4)
@@ -140,9 +89,9 @@ GIT
 
 GIT
   remote: https://github.com/krausefx/trainer
-  revision: 27991a531ef1b7b15f410bd97a4681fa1f31c58d
+  revision: 52c7a2770e3803549268c7e45a6700f0879f6fe3
   specs:
-    fastlane-plugin-trainer (0.1.3)
+    fastlane-plugin-trainer (0.1.4)
       trainer (>= 0.1.3)
     trainer (0.1.3)
       fastlane_core (>= 0.48.1, < 1.0.0)
@@ -206,6 +155,15 @@ GEM
       highline (~> 1.7.2)
     cork (0.1.0)
       colored (~> 1.2)
+    danger-junit (0.6.4)
+      danger (~> 2.0)
+      ox (~> 2.0)
+    deliver (1.13.2)
+      credentials_manager (>= 0.16.0, < 1.0.0)
+      fastimage (~> 1.6)
+      fastlane_core (>= 0.49.0, < 1.0.0)
+      plist (~> 3.1.0)
+      spaceship (>= 0.30.0, < 1.0.0)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
@@ -222,6 +180,19 @@ GEM
       faraday (>= 0.7.4, < 0.10)
     fastimage (1.6.8)
       addressable (~> 2.3, >= 2.3.5)
+    fastlane_core (0.50.0)
+      babosa
+      colored
+      commander (= 4.3.5)
+      credentials_manager (>= 0.16.0, < 1.0.0)
+      excon (~> 0.45.0)
+      gh_inspector (>= 1.0.1, < 2.0.0)
+      highline (>= 1.7.2)
+      json
+      multi_json
+      plist (~> 3.1)
+      rubyzip (~> 1.1.6)
+      terminal-table (~> 1.4.5)
     fourflusher (0.3.2)
     fuzzy_match (2.0.4)
     gh_inspector (1.0.2)
@@ -247,14 +218,14 @@ GEM
     highline (1.7.8)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    httpclient (2.8.0)
+    httpclient (2.8.1)
     hurley (0.2)
     i18n (0.7.0)
     json (1.8.3)
     jwt (1.5.4)
     kramdown (1.11.1)
-    krausefx-shenzhen (0.14.9)
-      commander (~> 4.3)
+    krausefx-shenzhen (0.14.10)
+      commander (>= 4.3, < 5.0)
       dotenv (>= 0.7)
       faraday (~> 0.9)
       faraday_middleware (~> 0.9)
@@ -269,6 +240,13 @@ GEM
     logging (2.1.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
+    match (0.6.2)
+      cert (>= 1.2.8, < 2.0.0)
+      credentials_manager (>= 0.13.0, < 1.0.0)
+      fastlane_core (>= 0.39.0, < 1.0.0)
+      security
+      sigh (>= 1.2.2, < 2.0.0)
+      spaceship (>= 0.24.0, < 1.0.0)
     memoist (0.14.0)
     method_source (0.8.2)
     mime-types (3.1)
@@ -289,7 +267,11 @@ GEM
       sawyer (~> 0.7.0, >= 0.5.3)
     open4 (1.3.4)
     os (0.9.6)
+    ox (2.4.4)
     plist (3.1.0)
+    produce (1.1.4)
+      fastlane_core (>= 0.30.0, < 1.0.0)
+      spaceship (>= 0.29.1, < 1.0.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -302,6 +284,14 @@ GEM
     sawyer (0.7.0)
       addressable (>= 2.3.5, < 2.5)
       faraday (~> 0.8, < 0.10)
+    scan (0.10.1)
+      fastlane_core (>= 0.50.0, < 1.0.0)
+      slack-notifier (~> 1.3)
+      terminal-table
+      xcpretty (>= 0.2.1)
+      xcpretty-travis-formatter (>= 0.0.3)
+    screengrab (0.4.0)
+      fastlane_core (>= 0.38.0, < 1.0.0)
     security (0.1.3)
     signet (0.7.3)
       addressable (~> 2.3)
@@ -310,6 +300,20 @@ GEM
       multi_json (~> 1.10)
     slack-notifier (1.5.1)
     slop (3.6.0)
+    snapshot (1.13.1)
+      fastimage (~> 1.6.3)
+      fastlane_core (>= 0.50.0, < 1.0.0)
+      plist (~> 3.1.0)
+      xcpretty (>= 0.2.1)
+    spaceship (0.31.1)
+      colored
+      credentials_manager (>= 0.16.0)
+      faraday (~> 0.9)
+      faraday-cookie_jar (~> 0.0.6)
+      faraday_middleware (~> 0.9)
+      fastimage (~> 1.6)
+      multi_xml (~> 0.5)
+      plist (~> 3.1)
     terminal-notifier (1.6.3)
     terminal-table (1.4.5)
     thor (0.19.1)
@@ -341,6 +345,7 @@ DEPENDENCIES
   cocoapods
   danger!
   danger-device_grid
+  danger-junit
   fastlane!
   fastlane-plugin-emoji_fetcher!
   fastlane-plugin-trainer!

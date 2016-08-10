@@ -6,7 +6,7 @@ gem "bundler"
 
 gem "danger", git: "https://github.com/danger/danger"
 gem "danger-device_grid"
-# gem "danger-junit"
+gem "danger-junit"
 gem "pry"
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
