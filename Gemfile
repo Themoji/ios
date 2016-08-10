@@ -5,6 +5,7 @@ gem "bundler"
 
 gem "scan", git: "https://github.com/fastlane/fastlane", branch: "scan-derived-data"
 gem "fastlane", git: "https://github.com/fastlane/fastlane", branch: "scan-derived-data"
+gem "deliver", git: "https://github.com/fastlane/fastlane", branch: "scan-derived-data"
 
 gem "danger", git: "https://github.com/danger/danger"
 gem "danger-device_grid"

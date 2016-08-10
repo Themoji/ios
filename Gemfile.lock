@@ -38,6 +38,12 @@ GIT
       security
     danger-device_grid (0.1.2)
       fastlane (>= 1.94.0, < 2.0.0)
+    deliver (1.13.1)
+      credentials_manager (>= 0.16.0, < 1.0.0)
+      fastimage (~> 1.6)
+      fastlane_core (>= 0.46.2, < 1.0.0)
+      plist (~> 3.1.0)
+      spaceship (>= 0.26.2, < 1.0.0)
     fastlane (1.99.0)
       activesupport (< 5)
       addressable (~> 2.3)
@@ -170,12 +176,6 @@ GEM
       highline (~> 1.7.2)
     cork (0.1.0)
       colored (~> 1.2)
-    deliver (1.13.2)
-      credentials_manager (>= 0.16.0, < 1.0.0)
-      fastimage (~> 1.6)
-      fastlane_core (>= 0.49.0, < 1.0.0)
-      plist (~> 3.1.0)
-      spaceship (>= 0.30.0, < 1.0.0)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
@@ -352,6 +352,7 @@ DEPENDENCIES
   danger!
   danger-device_grid
   danger-junit!
+  deliver!
   fastlane!
   fastlane-plugin-emoji_fetcher!
   fastlane-plugin-trainer!
