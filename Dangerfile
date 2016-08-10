@@ -5,8 +5,8 @@ Dir[File.join(ENV["CIRCLE_TEST_REPORTS"], "**/*.xml")].each do |path|
   junit.report
 end
 
-puts "Running fastlane to generate and upload an ipa file..."
 
+puts "Running fastlane to generate and upload an ipa file..."
 options = {
   xcodebuild: {
     scheme: "Themoji"
