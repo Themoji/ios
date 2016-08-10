@@ -1,9 +1,8 @@
 GIT
   remote: https://github.com/KrauseFx/danger-junit
-  revision: 5960340e309deb7504ad6af26a56fb6e824db85a
-  branch: fix-parsing-crashes
+  revision: a8f919085b841386eae03a0e86278a9984090342
   specs:
-    danger-junit (0.6.4)
+    danger-junit (0.6.3)
       danger (~> 2.0)
       ox (~> 2.0)
 
@@ -136,11 +135,11 @@ GIT
 
 GIT
   remote: https://github.com/krausefx/trainer
-  revision: 962bbd93f1a25e6d6d3abd6c848c162d360cdf06
+  revision: 5c315f18db8daf6adb173d8880c0e1d02308c75e
   specs:
-    fastlane-plugin-trainer (0.1.4)
-      trainer (>= 0.1.3)
-    trainer (0.1.3)
+    fastlane-plugin-trainer (0.2.0)
+      trainer (>= 0.2.0)
+    trainer (0.2.0)
       fastlane_core (>= 0.50.0, < 1.0.0)
       plist (>= 3.1.0, < 4.0.0)
 

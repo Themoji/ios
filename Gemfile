@@ -25,7 +25,7 @@ end
 
 gem "danger", git: "https://github.com/danger/danger"
 gem "danger-device_grid"
-gem "danger-junit", git: "https://github.com/KrauseFx/danger-junit", branch: "fix-parsing-crashes"
+gem "danger-junit", git: "https://github.com/KrauseFx/danger-junit"
 gem "pry"
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
