@@ -1,6 +1,8 @@
 apple_id "apple@krausefx.com"
 app_identifier "me.themoji.app.beta"
 
+team_id "N8X438SEU2"
+
 for_lane :appstore do
   app_identifier "me.themoji.app.release"
 end
