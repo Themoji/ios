@@ -4,7 +4,7 @@ module Fastlane
       def self.run(params)
         require 'fileutils'
 
-        original = "/System/Library/Fonts/Apple Color Emoji.ttf"
+        original = "/System/Library/Fonts/Apple Color Emoji.ttc"
         UI.user_error!("Could not find font file at path '#{original}'") unless File.exist?(original)
         FileUtils.cp(original, params[:path])
         UI.success("Successfully fetched Emoji font")
