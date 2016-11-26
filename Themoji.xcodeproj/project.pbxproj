@@ -18,8 +18,8 @@
 		CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD81C4DCB2700A4C7EF /* ViewController.swift */; };
 		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
 		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
-		CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */; };
 		CADF5C641C6829D30035D126 /* FontRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF5C631C6829D30035D126 /* FontRendering.m */; };
+		E22EFF121DE9A5680077950A /* Apple Color Emoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,7 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */,
+				E22EFF121DE9A5680077950A /* Apple Color Emoji.ttf in Resources */,
 				CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */,
 				CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */,
 				CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */,

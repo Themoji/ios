@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var isCategoryOpen = false
     var isFullScreen = false
     
+    let originialInset: CGFloat = 5.0
     let defaultAutoCompletionHeight: CGFloat = 94
     let increasedAutoCompletionHeight: CGFloat = 250
     var emojiLabelHeight: CGFloat = 0.0 // this is NOT the font size
@@ -40,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.changeInputMode(_:)), name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
         
         let nibName = UINib(nibName: "CategoryButton", bundle:nil)
         self.categoriesCollectionView.registerNib(nibName, forCellWithReuseIdentifier: "Yo")
@@ -52,6 +54,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.didTriggerEmoji(_:)), name: "ShowEmoji", object: nil)
     }
     
+    func changeInputMode(notification: NSNotification) {
+        if isEmojiKeyboard() {            
+            self.autocompletionTableView.hidden = true
+        } else {
+            // So that everything is back to normal
+            
+            self.valueDidChange(self.textInput)
+        }
+    }
+
     func didTriggerEmoji(noti: NSNotification) {
         let searchString = (noti.object as! String).lowercaseString
         
@@ -73,11 +85,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.emojiHeightConstraint.constant = emojiLabelHeight
     }
     
+    func isEmojiKeyboard() -> Bool {
+        return textInput.textInputMode?.primaryLanguage == "emoji" || textInput.textInputMode?.primaryLanguage == nil
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
-            self.bottomConstraint.constant = contentInsets.bottom + 5.0
-            self.categoriesCollectionView.hidden = true
+            if self.bottomConstraint.constant == originialInset {
+                let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+                self.bottomConstraint.constant = contentInsets.bottom + 5.0
+                self.categoriesCollectionView.hidden = true
+            }
             UIView.animateWithDuration(0.25) {
                 self.view.layoutIfNeeded()
             }
@@ -85,7 +103,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        self.bottomConstraint.constant = 5.0
+        self.bottomConstraint.constant = self.originialInset
         UIView.animateWithDuration(0.25) {
             self.view.layoutIfNeeded()
         }
@@ -171,30 +189,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func valueDidChange(sender: AnyObject) {
-        if (self.textInput.text! != "") {
-            let input = self.textInput.text!.characters.last!
-            if emojiToText(input) != nil
-            {
-                setCurrentEmoji("\(input)")
-                resetTextField(false)
-            }
-            else
-            {
-                let searchString = self.textInput.text!.lowercaseString // all chars since the last match
-                
-                emojiFetcher.cancelFetches()
-                emojiFetcher.query(searchString) { emojiResults in
-                    self.autocompletionItemsName = []
-                    self.autocompletionItemsEmoji = []
-                    for (emoji) in emojiResults {
-                        self.autocompletionItemsEmoji.append(emoji.character)
-                        self.autocompletionItemsName.append(emoji.name)
+        if self.textInput.text!.characters.count > 0 {
+            if (self.textInput.text! != "") {
+                let input = self.textInput.text!.characters.last!
+                if emojiToText(input) != nil
+                {
+                    setCurrentEmoji("\(input)")
+                    resetTextField(false)
+                }
+                else
+                {
+                    let searchString = self.textInput.text!.lowercaseString // all chars since the last match
+                    
+                    emojiFetcher.cancelFetches()
+                    emojiFetcher.query(searchString) { emojiResults in
+                        self.autocompletionItemsName = []
+                        self.autocompletionItemsEmoji = []
+                        for (emoji) in emojiResults {
+                            self.autocompletionItemsEmoji.append(emoji.character)
+                            self.autocompletionItemsName.append(emoji.name)
+                        }
+                        self.autocompletionTableView.reloadData()
+                        self.autocompletionTableView.hidden = (emojiResults.count == 0)
+                        self.autocompletionTableView.flashScrollIndicators()
                     }
-                    self.autocompletionTableView.reloadData()
-                    self.autocompletionTableView.hidden = (emojiResults.count == 0)
-                    self.autocompletionTableView.flashScrollIndicators()
                 }
             }
+        } else {
+            self.autocompletionTableView.hidden = true
         }
     }
     
@@ -235,7 +257,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func setCurrentEmoji(e: String) {
-        self.textInput.hidden = true
+        self.textInput.hidden = false
         self.emojiLabel.text = e
 
         if var recent = NSUserDefaults.standardUserDefaults().objectForKey(emojiHistoryKey) {
