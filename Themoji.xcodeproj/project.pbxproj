@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64D4A3701D946480001AB787 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4A36F1D946480001AB787 /* CoreBluetooth.framework */; };
 		B533117F09502AF55EC3E691 /* Pods_Themoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188193D4EAE21F282697797E /* Pods_Themoji.framework */; };
 		CA659AD91C4DCB2700A4C7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */; };
 		CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		00B745FBC4904A673B6F6070 /* Pods-Themoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.debug.xcconfig"; sourceTree = "<group>"; };
 		188193D4EAE21F282697797E /* Pods_Themoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Themoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D4A36F1D946480001AB787 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A4D8DC13271950F2C0989D57 /* Pods-Themoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.release.xcconfig"; sourceTree = "<group>"; };
 		CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D4A3701D946480001AB787 /* CoreBluetooth.framework in Frameworks */,
 				B533117F09502AF55EC3E691 /* Pods_Themoji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +105,7 @@
 		219695BCE9E78DCC0ADB1E1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64D4A36F1D946480001AB787 /* CoreBluetooth.framework */,
 				188193D4EAE21F282697797E /* Pods_Themoji.framework */,
 			);
 			name = Frameworks;
@@ -488,7 +492,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +520,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
