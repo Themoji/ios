@@ -19,7 +19,6 @@
 		CA659AE11C4DCB2700A4C7EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA659AD81C4DCB2700A4C7EF /* ViewController.swift */; };
 		CA8E134A1C4C760900FB865B /* ThemojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13491C4C760900FB865B /* ThemojiUITests.swift */; };
 		CA8E13521C4C761500FB865B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E13511C4C761500FB865B /* SnapshotHelper.swift */; };
-		CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */; };
 		CADF5C641C6829D30035D126 /* FontRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF5C631C6829D30035D126 /* FontRendering.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +60,7 @@
 		188193D4EAE21F282697797E /* Pods_Themoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Themoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D4A36F1D946480001AB787 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A4D8DC13271950F2C0989D57 /* Pods-Themoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Themoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Themoji/Pods-Themoji.release.xcconfig"; sourceTree = "<group>"; };
+		CA1EA2DB1E405249000C43BC /* Apple Color Emoji.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Color Emoji.ttc"; sourceTree = "<group>"; };
 		CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA659ACF1C4DCB2700A4C7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA659AD11C4DCB2700A4C7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,6 @@
 		CA8E134B1C4C760900FB865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8E13511C4C761500FB865B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CAB6C1151C3C16E200BDB0F0 /* Themoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Color Emoji.ttf"; sourceTree = "<group>"; };
 		CADF5C611C6829D20035D126 /* Themoji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Themoji-Bridging-Header.h"; sourceTree = "<group>"; };
 		CADF5C621C6829D30035D126 /* FontRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontRendering.h; sourceTree = "<group>"; };
 		CADF5C631C6829D30035D126 /* FontRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontRendering.m; sourceTree = "<group>"; };
@@ -123,7 +122,7 @@
 		CA659ACD1C4DCB2700A4C7EF /* Themoji */ = {
 			isa = PBXGroup;
 			children = (
-				CADF5C5F1C68267D0035D126 /* Apple Color Emoji.ttf */,
+				CA1EA2DB1E405249000C43BC /* Apple Color Emoji.ttc */,
 				CA659ACE1C4DCB2700A4C7EF /* AppDelegate.swift */,
 				CADF5C621C6829D30035D126 /* FontRendering.h */,
 				CADF5C631C6829D30035D126 /* FontRendering.m */,
@@ -265,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CADF5C601C68267D0035D126 /* Apple Color Emoji.ttf in Resources */,
 				CA659ADC1C4DCB2700A4C7EF /* Main.storyboard in Resources */,
 				CA659ADF1C4DCB2700A4C7EF /* CategoryButton.xib in Resources */,
 				CA659ADA1C4DCB2700A4C7EF /* Assets.xcassets in Resources */,
