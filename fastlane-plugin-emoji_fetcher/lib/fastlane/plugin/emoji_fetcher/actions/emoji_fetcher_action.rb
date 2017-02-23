@@ -5,7 +5,7 @@ module Fastlane
         require 'fileutils'
 
         paths = ["/System/Library/Fonts/Apple Color Emoji.ttc", "/System/Library/Fonts/Apple Color Emoji.ttf"]
-        paths = paths.delete_if? { |a| !File.exist?(a) }
+        paths = paths.delete_if { |a| !File.exist?(a) }
         UI.user_error!("Could not find Emoji font.") if paths.count == 0
         FileUtils.cp(paths.first, params[:path])
         UI.success("Successfully fetched Emoji font")
