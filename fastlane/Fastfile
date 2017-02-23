@@ -37,9 +37,11 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    increment_build_number
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1,
+      xcodeproj: "Themoji.xcodeproj"
+    )
     build_app(env: "appstore")
-    commit_version_bump(force: true, xcodeproj: "Themoji.xcodeproj")
     pilot
   end
 
