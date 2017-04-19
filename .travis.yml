@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode7.3
+before_install:
+  bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without development
+script: bundle exec fastlane test
