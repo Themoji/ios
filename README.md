@@ -8,3 +8,6 @@ rake
 ```
 
 to fetch the latest Emojis from your local machine
+
+
+Testing `device_grid`
