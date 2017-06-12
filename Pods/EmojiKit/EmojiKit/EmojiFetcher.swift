@@ -12,9 +12,9 @@ public struct EmojiFetcher {
 
     // MARK: - Properties
 
-    private let backgroundQueue: NSOperationQueue = {
-        let queue = NSOperationQueue()
-        queue.qualityOfService = .UserInitiated
+    fileprivate let backgroundQueue: OperationQueue = {
+        let queue = OperationQueue()
+        queue.qualityOfService = .userInitiated
         return queue
     }()
 
@@ -25,18 +25,18 @@ public struct EmojiFetcher {
 
     // MARK: - Functions
 
-    public func query(searchString: String, completion: ([Emoji] -> Void)) {
+    public func query(_ searchString: String, completion: @escaping (([Emoji]) -> Void)) {
         cancelFetches()
 
         let operation = EmojiFetchOperation(searchString: searchString)
 
         operation.completionBlock = {
 
-            if operation.cancelled {
+            if operation.isCancelled {
                 return;
             }
 
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 completion(operation.results)
             }
         }
@@ -50,13 +50,13 @@ public struct EmojiFetcher {
 
 }
 
-private final class EmojiFetchOperation: NSOperation {
+private final class EmojiFetchOperation: Operation {
 
     static let allEmoji: [Emoji] = {
-        guard let path = NSBundle(forClass: EmojiFetchOperation.self).pathForResource("AllEmoji", ofType: "json"),
-            data = NSData(contentsOfFile: path),
-            jsonObject = try? NSJSONSerialization.JSONObjectWithData(data, options: []),
-            jsonDictionaries = jsonObject as? [JSONDictionary] else { return [] }
+        guard let path = Bundle(for: EmojiFetchOperation.self).path(forResource: "AllEmoji", ofType: "json"),
+            let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+            let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+            let jsonDictionaries = jsonObject as? [JSONDictionary] else { return [] }
 
         return jsonDictionaries.flatMap { Emoji(dictionary: $0) }
     }()
@@ -78,19 +78,19 @@ private final class EmojiFetchOperation: NSOperation {
     // MARK: - NSOperation
 
     override func main() {
-        let lowercaseSearchString = self.searchString.lowercaseString
-        let allEmoji = self.dynamicType.allEmoji
-        guard !cancelled else { return }
+        let lowercaseSearchString = self.searchString.lowercased()
+        let allEmoji = type(of: self).allEmoji
+        guard !isCancelled else { return }
 
         var results = [Emoji]()
 
         // Matches of the full names of the emoji
         results += allEmoji.filter { $0.name.hasPrefix(lowercaseSearchString) }
-        guard !cancelled else { return }
+        guard !isCancelled else { return }
 
         // Matches of individual words in the name
         results += allEmoji.filter { emoji in
-            guard results.indexOf(emoji) == nil else { return false }
+            guard results.index(of: emoji) == nil else { return false }
 
             var validResult = false
 
@@ -104,11 +104,11 @@ private final class EmojiFetchOperation: NSOperation {
             }
             return validResult
         }
-        guard !cancelled else { return }
+        guard !isCancelled else { return }
 
         // Alias matches
         results += allEmoji.filter { emoji in
-            guard results.indexOf(emoji) == nil else { return false }
+            guard results.index(of: emoji) == nil else { return false }
 
             var validResult = false
 
@@ -121,11 +121,11 @@ private final class EmojiFetchOperation: NSOperation {
 
             return validResult
         }
-        guard !cancelled else { return }
+        guard !isCancelled else { return }
 
         // Group matches
         results += allEmoji.filter { emoji in
-            guard results.indexOf(emoji) == nil else { return false }
+            guard results.index(of: emoji) == nil else { return false }
 
             var validResult = false
 
@@ -138,7 +138,7 @@ private final class EmojiFetchOperation: NSOperation {
 
             return validResult
         }
-        guard !cancelled else { return }
+        guard !isCancelled else { return }
 
         self.results = results
     }

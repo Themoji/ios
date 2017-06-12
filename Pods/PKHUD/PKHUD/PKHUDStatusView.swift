@@ -21,7 +21,7 @@ public final class PKHUDStatusView: PKHUDImageView {
         commonInit(title: "", subtitle: "")
     }
     
-    private func commonInit(title title: String?, subtitle: String?) {
+    fileprivate func commonInit(title: String?, subtitle: String?) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         
@@ -39,24 +39,24 @@ public final class PKHUDStatusView: PKHUDImageView {
         let quarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0)))
         let threeQuarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0 * 3.0)))
         
-        titleLabel.frame = CGRect(origin: CGPointZero, size: CGSize(width: viewWidth, height: quarterHeight))
+        titleLabel.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: viewWidth, height: quarterHeight))
         imageView.frame = CGRect(origin: CGPoint(x:0.0, y:quarterHeight), size: CGSize(width: viewWidth, height: halfHeight))
         subtitleLabel.frame = CGRect(origin: CGPoint(x:0.0, y:threeQuarterHeight), size: CGSize(width: viewWidth, height: quarterHeight))
     }
     
     public let titleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .Center
-        label.font = UIFont.boldSystemFontOfSize(17.0)
-        label.textColor = UIColor.blackColor().colorWithAlphaComponent(0.85)
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 17.0)
+        label.textColor = UIColor.black.withAlphaComponent(0.85)
         return label
     }()
     
     public let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .Center
-        label.font = UIFont.systemFontOfSize(14.0)
-        label.textColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.textColor = UIColor.black.withAlphaComponent(0.7)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         return label

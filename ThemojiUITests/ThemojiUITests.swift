@@ -28,9 +28,9 @@ class ThemojiUITests: XCTestCase {
         let app = XCUIApplication()
         snapshot("01Landing")
 
-        app.collectionViews.staticTexts.elementBoundByIndex(0).tap()
+        app.collectionViews.staticTexts.element(boundBy: 0).tap()
         snapshot("02Category")
-        app.tables.staticTexts.elementBoundByIndex(0).tap()
+        app.tables.staticTexts.element(boundBy: 0).tap()
         
         
         app.buttons["Search"].tap()

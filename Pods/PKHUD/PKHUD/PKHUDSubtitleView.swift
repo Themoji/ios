@@ -21,7 +21,7 @@ public final class PKHUDSubtitleView: PKHUDImageView {
         commonInit(subtitle: "");
     }
     
-    func commonInit(subtitle subtitle: String?) {
+    func commonInit(subtitle: String?) {
         subtitleLabel.text = subtitle
         addSubview(subtitleLabel)
     }
@@ -43,9 +43,9 @@ public final class PKHUDSubtitleView: PKHUDImageView {
     
     public let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .Center
-        label.font = UIFont.boldSystemFontOfSize(17.0)
-        label.textColor = UIColor.blackColor().colorWithAlphaComponent(0.85)
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 17.0)
+        label.textColor = UIColor.black.withAlphaComponent(0.85)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         return label

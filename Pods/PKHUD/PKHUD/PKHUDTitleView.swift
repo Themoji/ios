@@ -21,7 +21,7 @@ public final class PKHUDTitleView: PKHUDImageView {
         commonInit(title: "");
     }
     
-    func commonInit(title title: String?) {
+    func commonInit(title: String?) {
         titleLabel.text = title
         addSubview(titleLabel)
     }
@@ -43,9 +43,9 @@ public final class PKHUDTitleView: PKHUDImageView {
     
     public let titleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .Center
-        label.font = UIFont.boldSystemFontOfSize(17.0)
-        label.textColor = UIColor.blackColor().colorWithAlphaComponent(0.85)
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 17.0)
+        label.textColor = UIColor.black.withAlphaComponent(0.85)
         return label
     }()
 }

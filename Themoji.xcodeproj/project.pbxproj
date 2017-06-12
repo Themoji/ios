@@ -225,11 +225,14 @@
 				TargetAttributes = {
 					CA8E13461C4C760900FB865B = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
 						TestTargetID = CAB6C1141C3C16E200BDB0F0;
 					};
 					CAB6C1141C3C16E200BDB0F0 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = N8X438SEU2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -381,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.ThemojiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Themoji;
 				USES_XCTRUNNER = YES;
 			};
@@ -394,6 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.ThemojiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Themoji;
 				USES_XCTRUNNER = YES;
 			};
@@ -490,7 +495,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,10 +506,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
 				PRODUCT_NAME = Themoji;
+				PROVISIONING_PROFILE = "ede216bd-064d-4a6f-bd61-5224e2391b07";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development me.themoji.app.beta";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -518,7 +524,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,9 +535,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.themoji.app.beta;
 				PRODUCT_NAME = Themoji;
+				PROVISIONING_PROFILE = "7ab6893d-f7c3-40d4-855e-734e6afe592b";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.themoji.app.beta";
 				SWIFT_OBJC_BRIDGING_HEADER = "Themoji/Themoji-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

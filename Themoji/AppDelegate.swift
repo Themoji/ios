@@ -17,19 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        UIApplication.sharedApplication().applicationSupportsShakeToEdit = false
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.applicationSupportsShakeToEdit = false
 
         Fabric.with([Crashlytics.self])
         
         return true
     }
     
-    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        let url = url.standardizedURL
-        let emoji = url?.absoluteString!.componentsSeparatedByString("/").last
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        let url = url.standardized
+        let emoji = url.absoluteString.components(separatedBy: "/").last
         
-        NSNotificationCenter.defaultCenter().postNotificationName("ShowEmoji", object: emoji)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ShowEmoji"), object: emoji)
         
         return true
     }

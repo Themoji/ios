@@ -11,6 +11,6 @@ import UIKit
 @objc protocol PKHUDAnimating {
     
     func startAnimation()
-    optional func stopAnimation()
+    @objc optional func stopAnimation()
 }
 

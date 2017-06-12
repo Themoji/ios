@@ -9,7 +9,7 @@
 import UIKit
 
 /// PKHUDImageView provides a square view, which you can use to display a single image.
-public class PKHUDImageView: PKHUDSquareBaseView {
+open class PKHUDImageView: PKHUDSquareBaseView {
     
     public init(image: UIImage?) {
         super.init()
@@ -21,21 +21,21 @@ public class PKHUDImageView: PKHUDSquareBaseView {
         commonInit(image: nil)
     }
     
-    func commonInit(image image: UIImage?) {
+    func commonInit(image: UIImage?) {
         imageView.image = image
         addSubview(imageView)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         imageView.frame = bounds
     }
     
-    public let imageView: UIImageView = {
+    open let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.alpha = 0.85
         imageView.clipsToBounds = true
-        imageView.contentMode = .Center
+        imageView.contentMode = .center
         return imageView
     }()
 }
