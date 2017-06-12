@@ -56,6 +56,6 @@ platform :ios do
 
   private_lane :build_app do |options|
     match(type: options[:env], readonly: true)
-    gym(scheme: "Themoji", use_legacy_build_api: true)
+    gym(scheme: "Themoji")
   end
 end
