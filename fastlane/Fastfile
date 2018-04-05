@@ -27,14 +27,8 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    begin
-      scan(scheme: "ThemojiUITests", 
-           output_types: "",
-           fail_build: false)
-    rescue => ex
        puts 'hi'
         say "hey there"
-    end
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
