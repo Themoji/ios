@@ -16,26 +16,12 @@ GIT
       terminal-table (~> 1)
 
 GIT
-  remote: https://github.com/krausefx/trainer
-  revision: 56432db48e8f110181b393b33490a3d4763982ec
-  specs:
-    fastlane-plugin-trainer (0.4.0)
-      trainer (>= 0.7.0)
-    trainer (0.7.0)
-      plist (>= 3.1.0, < 4.0.0)
-
-GIT
   remote: https://github.com/orta/danger-junit
   revision: ec0b2ac254728a0b0fe44644186ce9a19e4ad342
   specs:
     danger-junit (0.7.4)
       danger (> 2.0)
       ox (~> 2.0)
-
-PATH
-  remote: fastlane-plugin-emoji_fetcher
-  specs:
-    fastlane-plugin-emoji_fetcher (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -103,7 +89,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     escape (0.0.4)
-    excon (0.60.0)
+    excon (0.71.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     faraday-cookie_jar (0.0.6)
@@ -259,8 +245,6 @@ DEPENDENCIES
   danger-device_grid
   danger-junit!
   fastlane
-  fastlane-plugin-emoji_fetcher!
-  fastlane-plugin-trainer!
   pry
 
 BUNDLED WITH
